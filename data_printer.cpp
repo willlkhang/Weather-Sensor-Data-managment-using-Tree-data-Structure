@@ -51,7 +51,7 @@ void outputToCMDforS_T_R_SPCC_Combination(SensorlogType1& sensorData, int month)
 
 	std::cout << "S_T " << std::fixed << std::setprecision(2) << S_T << "\n";
 	std::cout << "S_R " << std::fixed << std::setprecision(2) << S_R << "\n";
-	std::cout << "T_R " << std::fixed << std::setprecision(2) << T_R << "\n\n";
+	std::cout << "T_R " << std::fixed << std::setprecision(2) << T_R << "\n";
 }
 
 void outputWholeDATAtoCMD(SensorlogType1& sensorData, int year) {
