@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1744480244 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\topic05\practical\windspeedlab05_main\unittest\mathtest\mathtest.cpp
+	"../../math.h"
+	<iostream>
+	<cmath>
+
+1744480950 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\topic05\practical\windspeedlab05_main\math.h
+	"vector.h"
+	<cmath>
+
+1744477410 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\topic05\practical\windspeedlab05_main\vector.h
+
+1744480996 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\unittest\mathtest\mathtest.cpp
+	"../../math.h"
+	<iostream>
+	<cmath>
+
+1745556181 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\math.h
+	"vector.h"
+	<cmath>
+
+1745556231 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\vector.h
+

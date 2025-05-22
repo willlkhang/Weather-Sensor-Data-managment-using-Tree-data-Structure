@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="assigment1main" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="user\menu\;user\user_input\;user\user_input_validator\;data_handling\print_helper\;data_handling\data_calculate\;data_struct\data_structure\;data_handling\functions\;data_struct\io_operator\;data_handling\data_match\;data_struct\time\;data_struct\date\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/windSpeedLab05_main" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/windSpeedLab05_main" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="DataExtractor.cpp" />
+		<Unit filename="DataExtractor.h" />
+		<Unit filename="RBTree.h" />
+		<Unit filename="data_calculator.cpp">
+			<Option virtualFolder="data_handling/data_calculate/" />
+		</Unit>
+		<Unit filename="data_calculator.h">
+			<Option virtualFolder="data_handling/data_calculate/" />
+		</Unit>
+		<Unit filename="data_match.cpp">
+			<Option virtualFolder="data_handling/data_match/" />
+		</Unit>
+		<Unit filename="data_match.h">
+			<Option virtualFolder="data_handling/data_match/" />
+		</Unit>
+		<Unit filename="data_printer.cpp">
+			<Option virtualFolder="data_handling/print_helper/" />
+		</Unit>
+		<Unit filename="data_printer.h">
+			<Option virtualFolder="data_handling/print_helper/" />
+		</Unit>
+		<Unit filename="data_structure.cpp" />
+		<Unit filename="data_structure.h">
+			<Option virtualFolder="data_struct/data_structure/" />
+		</Unit>
+		<Unit filename="data_structure_enumeration.h">
+			<Option virtualFolder="data_handling/data_calculate/" />
+		</Unit>
+		<Unit filename="date.cpp">
+			<Option virtualFolder="data_struct/date/" />
+		</Unit>
+		<Unit filename="date.h">
+			<Option virtualFolder="data_struct/date/" />
+		</Unit>
+		<Unit filename="hashMap.h" />
+		<Unit filename="input_processor2.cpp">
+			<Option virtualFolder="data_handling/functions/" />
+		</Unit>
+		<Unit filename="input_processor2.h">
+			<Option virtualFolder="data_handling/functions/" />
+		</Unit>
+		<Unit filename="io_operator.cpp">
+			<Option virtualFolder="data_struct/io_operator/" />
+		</Unit>
+		<Unit filename="io_operator.h">
+			<Option virtualFolder="data_struct/io_operator/" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="math.h">
+			<Option virtualFolder="data_struct/data_structure/" />
+		</Unit>
+		<Unit filename="menu.cpp">
+			<Option virtualFolder="user/menu/" />
+		</Unit>
+		<Unit filename="menu.h">
+			<Option virtualFolder="user/menu/" />
+		</Unit>
+		<Unit filename="menu_operator.cpp">
+			<Option virtualFolder="user/menu/" />
+		</Unit>
+		<Unit filename="menu_operator.h">
+			<Option virtualFolder="user/menu/" />
+		</Unit>
+		<Unit filename="time.cpp">
+			<Option virtualFolder="data_struct/time/" />
+		</Unit>
+		<Unit filename="time.h">
+			<Option virtualFolder="data_struct/time/" />
+		</Unit>
+		<Unit filename="user_input.cpp">
+			<Option virtualFolder="user/user_input/" />
+		</Unit>
+		<Unit filename="user_input.h">
+			<Option virtualFolder="user/user_input/" />
+		</Unit>
+		<Unit filename="user_input_validator.cpp">
+			<Option virtualFolder="user/user_input_validator/" />
+		</Unit>
+		<Unit filename="user_input_validator.h">
+			<Option virtualFolder="user/user_input_validator/" />
+		</Unit>
+		<Unit filename="vector.h">
+			<Option virtualFolder="data_struct/data_structure/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

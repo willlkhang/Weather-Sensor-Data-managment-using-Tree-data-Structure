@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1744478474 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\unittest\datetest\datetest.cpp
+	"../../date.h"
+	"../../date.cpp"
+	<iostream>
+
+1745557998 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1744477378 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\date.cpp
+	"date.h"
+

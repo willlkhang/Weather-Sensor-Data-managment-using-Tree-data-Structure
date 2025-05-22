@@ -1,0 +1,520 @@
+# depslib dependency file v1.0
+1745580354 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_calculator.cpp
+	"data_calculator.h"
+
+1745580426 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_calculator.h
+	"math.h"
+	"io_operator.h"
+	"data_structure_enumeration.h"
+
+1745556181 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\math.h
+	"vector.h"
+	<cmath>
+
+1745556231 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\vector.h
+
+1745557378 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\io_operator.h
+	<string>
+	<iostream>
+	<sstream>
+	<iomanip>
+	"date.h"
+	"time.h"
+	"data_structure.h"
+
+1745557998 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1745556661 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\time.h
+
+1745557890 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+
+1745558611 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_structure_enumeration.h
+	"data_calculator.h"
+
+1745555239 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_match.cpp
+	"data_match.h"
+
+1745555284 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_match.h
+	"date.h"
+	"data_structure.h"
+	"user_input.h"
+
+1745559330 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input.h
+	<iostream>
+	<string>
+	"user_input_validator.h"
+
+1745557860 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input_validator.h
+	<string>
+	<cctype>
+	"data_structure.h"
+
+1745580481 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_printer.cpp
+	"data_printer.h"
+
+1745558880 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_printer.h
+	"io_operator.h"
+	"data_calculator.h"
+	"data_match.h"
+	"data_structure.h"
+
+1744477378 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\date.cpp
+	"date.h"
+
+1745579636 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\input_processor.cpp
+	"input_processor.h"
+
+1745555060 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\input_processor.h
+	"data_structure.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1745467507 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\io_operator.cpp
+	"io_operator.h"
+
+1745581253 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\main.cpp
+	<iostream>
+	<fstream>
+	"data_structure.h"
+	"input_processor.h"
+	"menu.h"
+
+1745559098 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\menu.h
+	<iostream>
+	"data_structure.h"
+	"menu_operator.h"
+
+1745559198 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\menu_operator.h
+	<iostream>
+	"input_processor.h"
+	"data_match.h"
+	"user_input.h"
+	"data_printer.h"
+	"data_calculator.h"
+	"data_structure.h"
+
+1745460296 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\menu.cpp
+	"menu.h"
+
+1745494086 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\menu_operator.cpp
+	"menu_operator.h"
+
+1744512896 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\time.cpp
+	"time.h"
+	<iostream>
+
+1745460806 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input.cpp
+	"user_input.h"
+
+1745548997 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input_validator.cpp
+	"user_input_validator.h"
+
+1745580354 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_calculator.cpp
+	"data_calculator.h"
+
+1745580426 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_calculator.h
+	"math.h"
+	"io_operator.h"
+	"data_structure_enumeration.h"
+
+1745556181 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\math.h
+	"vector.h"
+	<cmath>
+
+1745556231 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\vector.h
+
+1745557378 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\io_operator.h
+	<string>
+	<iostream>
+	<sstream>
+	<iomanip>
+	"date.h"
+	"time.h"
+	"data_structure.h"
+
+1745557998 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1745556661 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\time.h
+
+1745557890 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+
+1745558611 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_structure_enumeration.h
+	"data_calculator.h"
+
+1745555239 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_match.cpp
+	"data_match.h"
+
+1745555284 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_match.h
+	"date.h"
+	"data_structure.h"
+	"user_input.h"
+
+1745559330 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\user_input.h
+	<iostream>
+	<string>
+	"user_input_validator.h"
+
+1745557860 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\user_input_validator.h
+	<string>
+	<cctype>
+	"data_structure.h"
+
+1745580481 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_printer.cpp
+	"data_printer.h"
+
+1745558880 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\data_printer.h
+	"io_operator.h"
+	"data_calculator.h"
+	"data_match.h"
+	"data_structure.h"
+
+1744477378 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\date.cpp
+	"date.h"
+
+1745579636 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\input_processor.cpp
+	"input_processor.h"
+
+1745555060 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\input_processor.h
+	"data_structure.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1745467507 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\io_operator.cpp
+	"io_operator.h"
+
+1745581253 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\main.cpp
+	<iostream>
+	<fstream>
+	"data_structure.h"
+	"input_processor.h"
+	"menu.h"
+
+1745559098 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\menu.h
+	<iostream>
+	"data_structure.h"
+	"menu_operator.h"
+
+1745559198 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\menu_operator.h
+	<iostream>
+	"input_processor.h"
+	"data_match.h"
+	"user_input.h"
+	"data_printer.h"
+	"data_calculator.h"
+	"data_structure.h"
+
+1745460296 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\menu.cpp
+	"menu.h"
+
+1745494086 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\menu_operator.cpp
+	"menu_operator.h"
+
+1744512896 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\time.cpp
+	"time.h"
+	<iostream>
+
+1745460806 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\user_input.cpp
+	"user_input.h"
+
+1745548997 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\submitfolder\ass1weathercompute\user_input_validator.cpp
+	"user_input_validator.h"
+
+1745580354 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_calculator.cpp
+	"data_calculator.h"
+
+1745580426 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_calculator.h
+	"math.h"
+	"io_operator.h"
+	"data_structure_enumeration.h"
+
+1745556180 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\math.h
+	"vector.h"
+	<cmath>
+
+1745556230 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\vector.h
+
+1745557378 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\io_operator.h
+	<string>
+	<iostream>
+	<sstream>
+	<iomanip>
+	"date.h"
+	"time.h"
+	"data_structure.h"
+
+1745557998 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1745556660 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\time.h
+
+1745557890 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+
+1745558610 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_structure_enumeration.h
+	"data_calculator.h"
+
+1745555238 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_match.cpp
+	"data_match.h"
+
+1745555284 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_match.h
+	"date.h"
+	"data_structure.h"
+	"user_input.h"
+
+1745559330 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\user_input.h
+	<iostream>
+	<string>
+	"user_input_validator.h"
+
+1745557860 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\user_input_validator.h
+	<string>
+	<cctype>
+	"data_structure.h"
+
+1745580480 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_printer.cpp
+	"data_printer.h"
+
+1745558880 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\data_printer.h
+	"io_operator.h"
+	"data_calculator.h"
+	"data_match.h"
+	"data_structure.h"
+
+1744477378 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\date.cpp
+	"date.h"
+
+1745579636 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\input_processor.cpp
+	"input_processor.h"
+
+1745555060 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\input_processor.h
+	"data_structure.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1745467506 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\io_operator.cpp
+	"io_operator.h"
+
+1745581252 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\main.cpp
+	<iostream>
+	<fstream>
+	"data_structure.h"
+	"input_processor.h"
+	"menu.h"
+
+1745559098 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\menu.h
+	<iostream>
+	"data_structure.h"
+	"menu_operator.h"
+
+1745559198 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\menu_operator.h
+	<iostream>
+	"input_processor.h"
+	"data_match.h"
+	"user_input.h"
+	"data_printer.h"
+	"data_calculator.h"
+	"data_structure.h"
+
+1745460296 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\menu.cpp
+	"menu.h"
+
+1745494086 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\menu_operator.cpp
+	"menu_operator.h"
+
+1744512896 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\time.cpp
+	"time.h"
+	<iostream>
+
+1745460806 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\user_input.cpp
+	"user_input.h"
+
+1745548996 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass1weathercompute\user_input_validator.cpp
+	"user_input_validator.h"
+
+1745580354 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_calculator.cpp
+	"data_calculator.h"
+
+1747762668 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_calculator.h
+	"math.h"
+	"io_operator.h"
+	"data_structure_enumeration.h"
+
+1747893875 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\math.h
+	"vector.h"
+	<cmath>
+
+1745556230 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\vector.h
+
+1745557378 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\io_operator.h
+	<string>
+	<iostream>
+	<sstream>
+	<iomanip>
+	"date.h"
+	"time.h"
+	"data_structure.h"
+
+1747757758 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1747758854 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.h
+
+1747758307 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+	"hashMap.h"
+	"RBTree.h"
+
+1745558610 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure_enumeration.h
+	"data_calculator.h"
+
+1747836906 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_match.cpp
+	"data_match.h"
+
+1747836601 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_match.h
+	"date.h"
+	"data_structure.h"
+	"DataExtractor.h"
+
+1745559330 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\user_input.h
+	<iostream>
+	<string>
+	"user_input_validator.h"
+
+1745557860 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\user_input_validator.h
+	<string>
+	<cctype>
+	"data_structure.h"
+
+1747882650 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_printer.cpp
+	"data_printer.h"
+
+1747837458 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_printer.h
+	"io_operator.h"
+	"data_calculator.h"
+	"data_match.h"
+	"data_structure.h"
+
+1747757764 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.cpp
+	"date.h"
+
+1745579636 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor.cpp
+	"input_processor.h"
+
+1745555060 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor.h
+	"data_structure.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1745467506 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\io_operator.cpp
+	"io_operator.h"
+
+1747802589 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\main.cpp
+	<fstream>
+	"data_structure.h"
+	"menu.h"
+	"input_processor2.h"
+	"RBmap.h"
+	<chrono>
+	<iostream>
+
+1747840679 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu.h
+	<iostream>
+	"data_structure.h"
+	"menu_operator.h"
+
+1747840679 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.h
+	<iostream>
+	"input_processor2.h"
+	"data_match.h"
+	"user_input.h"
+	"data_printer.h"
+	"data_calculator.h"
+	"data_structure.h"
+
+1747837176 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu.cpp
+	"menu.h"
+
+1747844366 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.cpp
+	"menu_operator.h"
+
+1747758857 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.cpp
+	"time.h"
+	<iostream>
+
+1745460806 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\user_input.cpp
+	"user_input.h"
+
+1745548996 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\user_input_validator.cpp
+	"user_input_validator.h"
+
+1747894181 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.cpp
+	"input_processor2.h"
+
+1747755288 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.h
+	"data_structure.h"
+	<string>
+	<fstream>
+	<iostream>
+	<sstream>
+	<iomanip>
+	"RBmap.h"
+
+1746600098 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\rbmap.h
+	<stdexcept>
+
+1747722301 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\hashmap.h
+	<iostream>
+	<functional>
+	<stdexcept>
+
+1747894537 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\rbtree.h
+	<queue>
+	<stdexcept>
+	"IO.h"
+
+1747758957 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.cpp
+	"data_structure.h"
+
+1747815590 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\dataextractor.h
+	"vector.h"
+	"data_structure.h"
+
+1747824715 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\dataextractor.cpp
+	"DataExtractor.h"
+

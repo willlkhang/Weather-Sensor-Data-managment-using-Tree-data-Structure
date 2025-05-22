@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1745571630 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\unittest\userinputtest\main.cpp
+	<iostream>
+	"../../user_input.h"
+	"../../user_input.cpp"
+	"../../user_input_validator.h"
+	"../../user_input_validator.cpp"
+	"../../user_input_validator.h"
+
+1745559330 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input.h
+	<iostream>
+	<string>
+	"user_input_validator.h"
+
+1745557860 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input_validator.h
+	<string>
+	<cctype>
+	"data_structure.h"
+
+1745557890 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+
+1745557998 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1745556661 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\time.h
+
+1745556231 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\vector.h
+
+1745460806 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input.cpp
+	"user_input.h"
+
+1745548997 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\user_input_validator.cpp
+	"user_input_validator.h"
+
