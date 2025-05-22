@@ -23,4 +23,6 @@ double calStardDeviation(const Vector<SensorRecType>& data, double &mean, Sensor
 
 double calsPCC(const Vector<SensorRecType>& data, SensorDataField type1, SensorDataField type2);
 
+double calMAD(const Vector<SensorRecType>& data, SensorDataField type);
+
 #endif // DATA_CALCULATOR _H

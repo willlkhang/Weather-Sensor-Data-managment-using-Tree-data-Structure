@@ -52,3 +52,13 @@ double calsPCC(const Vector<SensorRecType>& data, SensorDataField type1, SensorD
 
     return spcc;
 }
+
+double calMAD(const Vector<SensorRecType>& data, SensorDataField type) {
+    Math<double> math;
+
+	Vector<double> extractedData = dataFieldFilter(data, type);
+
+	double mad = math.MAD(extractedData);
+
+    return mad;
+}

@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 #include "io_operator.h"
 #include "data_calculator.h"
