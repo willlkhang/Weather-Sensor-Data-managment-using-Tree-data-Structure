@@ -5,37 +5,45 @@
         <error id="missingInclude" severity="information" msg='Include file: &quot;IO.h&quot; not found.' verbose='Include file: &quot;IO.h&quot; not found.'>
             <location file="RBTree.h" line="6" column="0" />
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;RBTNode&apos; has a constructor with 1 argument that is not explicit." verbose='Struct &apos;RBTNode&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="DataExtractor.h">
-            <location file="RBTree.h" line="59" column="5" />
-            <symbol>RBTNode</symbol>
-        </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="DataExtractor.h">
-            <location file="vector.h" line="49" column="5" />
-            <symbol>Vector &lt; SensorRecType &gt;</symbol>
-        </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Math&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Math&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_printer.h">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Math&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Math&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.h">
             <location file="math.h" line="54" column="5" />
             <symbol>Math</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;RBTNode &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Struct &apos;RBTNode &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_printer.h">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;RBTNode &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Struct &apos;RBTNode &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.h">
             <location file="RBTree.h" line="59" column="5" />
             <symbol>RBTNode &lt; SensorRecType &gt;</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_printer.h">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; SensorRecType &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.h">
+            <location file="vector.h" line="49" column="5" />
+            <symbol>Vector &lt; SensorRecType &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.h">
             <location file="vector.h" line="49" column="5" />
             <symbol>Vector &lt; double &gt;</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="menu_operator.h">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector &lt; std :: string &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="menu.cpp">
             <location file="vector.h" line="49" column="5" />
             <symbol>Vector &lt; std :: string &gt;</symbol>
         </error>
-        <error id="passedByValue" severity="performance" msg="Function parameter &apos;str&apos; should be passed by const reference." verbose="Parameter &apos;str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="menu_operator.h">
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;str&apos; should be passed by const reference." verbose="Parameter &apos;str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="menu.cpp">
             <location file="user_input_validator.h" line="34" column="33" info="Function parameter &apos;str&apos; should be passed by const reference." />
             <symbol>str</symbol>
         </error>
-        <error id="constVariablePointer" severity="style" msg="Variable &apos;n&apos; can be declared as pointer to const" verbose="Variable &apos;n&apos; can be declared as pointer to const" cwe="398" file0="menu_operator.h">
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;n&apos; can be declared as pointer to const" verbose="Variable &apos;n&apos; can be declared as pointer to const" cwe="398" file0="menu.cpp">
             <location file="RBmap.h" line="89" column="7" info="Variable &apos;n&apos; can be declared as pointer to const" />
             <symbol>n</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="DataExtractor.cpp">
+            <location file="vector.h" line="49" column="5" />
+            <symbol>Vector</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;RBTNode&apos; has a constructor with 1 argument that is not explicit." verbose='Struct &apos;RBTNode&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="DataExtractor.cpp">
+            <location file="RBTree.h" line="59" column="5" />
+            <symbol>RBTNode</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;str&apos; should be passed by const reference." verbose="Parameter &apos;str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="user_input_validator.cpp">
+            <location file="user_input_validator.cpp" line="3" column="33" info="Function parameter &apos;str&apos; should be passed by const reference." />
+            <symbol>str</symbol>
         </error>
         <error id="unusedStructMember" severity="style" msg="class member &apos;Date::day&apos; is never used." verbose="class member &apos;Date::day&apos; is never used." cwe="563" file0="date.h">
             <location file="date.h" line="132" column="6" />
@@ -49,13 +57,13 @@
             <location file="date.h" line="136" column="6" />
             <symbol>Date::year</symbol>
         </error>
-        <error id="passedByValue" severity="performance" msg="Function parameter &apos;name&apos; should be passed by const reference." verbose="Parameter &apos;name&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="data_printer.cpp">
-            <location file="data_printer.cpp" line="119" column="39" info="Function parameter &apos;name&apos; should be passed by const reference." />
-            <symbol>name</symbol>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Math &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Math &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.cpp">
+            <location file="math.h" line="54" column="5" />
+            <symbol>Math &lt; double &gt;</symbol>
         </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Vector&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Vector&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="DataExtractor.cpp">
-            <location file="vector.h" line="49" column="5" />
-            <symbol>Vector</symbol>
+        <error id="constParameterReference" severity="style" msg="Parameter &apos;mean&apos; can be declared as reference to const" verbose="Parameter &apos;mean&apos; can be declared as reference to const" cwe="398" file0="data_calculator.cpp">
+            <location file="data_calculator.cpp" line="35" column="69" info="Parameter &apos;mean&apos; can be declared as reference to const" />
+            <symbol>mean</symbol>
         </error>
         <error id="unusedStructMember" severity="style" msg="class member &apos;Time::hour&apos; is never used." verbose="class member &apos;Time::hour&apos; is never used." cwe="563" file0="time.h">
             <location file="time.h" line="75" column="9" />
@@ -64,30 +72,6 @@
         <error id="unusedStructMember" severity="style" msg="class member &apos;Time::minute&apos; is never used." verbose="class member &apos;Time::minute&apos; is never used." cwe="563" file0="time.h">
             <location file="time.h" line="77" column="9" />
             <symbol>Time::minute</symbol>
-        </error>
-        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Math &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit." verbose='Class &apos;Math &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions.' cwe="398" file0="data_calculator.cpp">
-            <location file="math.h" line="54" column="5" />
-            <symbol>Math &lt; double &gt;</symbol>
-        </error>
-        <error id="constParameterReference" severity="style" msg="Parameter &apos;mean&apos; can be declared as reference to const" verbose="Parameter &apos;mean&apos; can be declared as reference to const" cwe="398" file0="data_calculator.cpp">
-            <location file="data_calculator.cpp" line="62" column="69" info="Parameter &apos;mean&apos; can be declared as reference to const" />
-            <symbol>mean</symbol>
-        </error>
-        <error id="constParameterReference" severity="style" msg="Parameter &apos;sensorData&apos; can be declared as reference to const" verbose="Parameter &apos;sensorData&apos; can be declared as reference to const" cwe="398" file0="menu_operator.cpp">
-            <location file="menu_operator.cpp" line="21" column="45" info="Parameter &apos;sensorData&apos; can be declared as reference to const" />
-            <symbol>sensorData</symbol>
-        </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;y&apos; is assigned a value that is never used." verbose="Variable &apos;y&apos; is assigned a value that is never used." cwe="563" file0="menu_operator.cpp">
-            <location file="menu_operator.cpp" line="22" column="8" />
-            <symbol>y</symbol>
-        </error>
-        <error id="unreadVariable" severity="style" msg="Variable &apos;m&apos; is assigned a value that is never used." verbose="Variable &apos;m&apos; is assigned a value that is never used." cwe="563" file0="menu_operator.cpp">
-            <location file="menu_operator.cpp" line="23" column="8" />
-            <symbol>m</symbol>
-        </error>
-        <error id="passedByValue" severity="performance" msg="Function parameter &apos;str&apos; should be passed by const reference." verbose="Parameter &apos;str&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398" file0="user_input_validator.cpp">
-            <location file="user_input_validator.cpp" line="3" column="33" info="Function parameter &apos;str&apos; should be passed by const reference." />
-            <symbol>str</symbol>
         </error>
         <error id="unusedFunction" severity="style" msg="The function &apos;preOrder&apos; is never used." verbose="The function &apos;preOrder&apos; is never used." cwe="561">
             <location file="RBTree.h" line="381" column="0" />
@@ -104,10 +88,6 @@
         <error id="unusedFunction" severity="style" msg="The function &apos;BFS&apos; is never used." verbose="The function &apos;BFS&apos; is never used." cwe="561">
             <location file="RBTree.h" line="396" column="0" />
             <symbol>BFS</symbol>
-        </error>
-        <error id="unusedFunction" severity="style" msg="The function &apos;outputToCMDforS_T_R_SPCC_Combination&apos; is never used." verbose="The function &apos;outputToCMDforS_T_R_SPCC_Combination&apos; is never used." cwe="561">
-            <location file="data_printer.cpp" line="45" column="0" />
-            <symbol>outputToCMDforS_T_R_SPCC_Combination</symbol>
         </error>
         <error id="unusedFunction" severity="style" msg="The function &apos;SetDay&apos; is never used." verbose="The function &apos;SetDay&apos; is never used." cwe="561">
             <location file="date.cpp" line="7" column="0" />
@@ -129,10 +109,6 @@
             <location file="hashMap.h" line="142" column="0" />
             <symbol>removeItem</symbol>
         </error>
-        <error id="unusedFunction" severity="style" msg="The function &apos;findValue&apos; is never used." verbose="The function &apos;findValue&apos; is never used." cwe="561">
-            <location file="hashMap.h" line="165" column="0" />
-            <symbol>findValue</symbol>
-        </error>
         <error id="unusedFunction" severity="style" msg="The function &apos;at&apos; is never used." verbose="The function &apos;at&apos; is never used." cwe="561">
             <location file="hashMap.h" line="214" column="0" />
             <symbol>at</symbol>
@@ -144,14 +120,6 @@
         <error id="unusedFunction" severity="style" msg="The function &apos;calStandardDeviation&apos; is never used." verbose="The function &apos;calStandardDeviation&apos; is never used." cwe="561">
             <location file="math.h" line="138" column="0" />
             <symbol>calStandardDeviation</symbol>
-        </error>
-        <error id="unusedFunction" severity="style" msg="The function &apos;sPPC&apos; is never used." verbose="The function &apos;sPPC&apos; is never used." cwe="561">
-            <location file="math.h" line="172" column="0" />
-            <symbol>sPPC</symbol>
-        </error>
-        <error id="unusedFunction" severity="style" msg="The function &apos;MAD&apos; is never used." verbose="The function &apos;MAD&apos; is never used." cwe="561">
-            <location file="math.h" line="189" column="0" />
-            <symbol>MAD</symbol>
         </error>
         <error id="unusedFunction" severity="style" msg="The function &apos;SetHour&apos; is never used." verbose="The function &apos;SetHour&apos; is never used." cwe="561">
             <location file="time.cpp" line="8" column="0" />

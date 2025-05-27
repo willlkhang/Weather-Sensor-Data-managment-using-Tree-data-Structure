@@ -20,4 +20,4 @@ add_executable(MyProgram
              data_printer.cpp
              input_processor2.cpp
               "data_structure.cpp"
-             DataExtractor.cpp)
+             DataExtractor.cpp "ICommand.h" "IFilter.h" "ICalcStrategy.h")
