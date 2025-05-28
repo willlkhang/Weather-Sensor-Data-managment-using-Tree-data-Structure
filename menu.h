@@ -14,10 +14,10 @@
 
 //---------------------------------------------------------------------------------
 
-void menu(SensorlogType1& sensorData);
+void menu(SensorlogType& sensorData);
 
 void displayMenuBoard();
 
-bool menuOptionInteraction(SensorlogType1& sensorData);
+bool menuOptionInteraction(SensorlogType& sensorData);
 
 #endif // MENU_H

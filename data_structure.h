@@ -146,12 +146,9 @@ const int menuItem = 5;
 	 * @todo Optimize memory usage for large logs
 	 * @bug Vector resizing may impact performance for large datasets
 	 */
-typedef Vector<SensorRecType> SensorlogType;
+typedef Vector<SensorRecType> SensorlogTypeVector;
 
-typedef HashMap<int, HashMap<int, RBTree<SensorRecType>>> SensorlogType1;
-
-\
-
+typedef HashMap<int, HashMap<int, RBTree<SensorRecType>>> SensorlogType;
 
 
 bool operator<(const SensorRecType& here, const SensorRecType& there);

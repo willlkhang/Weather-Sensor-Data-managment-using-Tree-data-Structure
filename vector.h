@@ -4,6 +4,8 @@
 #ifndef VECTOR_H_INCLUDED
 #define VECTOR_H_INCLUDED
 
+#include <cassert>
+
 //---------------------------------------------------------------------------------
 
 	/**
@@ -22,7 +24,7 @@
 	 * @todo Add bounds checking for subscript operator
 	 * @bug Subscript operator may access invalid memory if index is out of range
 	 */
-template <class T>
+template <typename T>
 class Vector{
 public:
 
@@ -136,21 +138,23 @@ private:
     int cap;
     /// Pointer to the dynamically allocated array
     T* array;
+
+	void resize(int newCapacity);
 };
 
 //==========================================implementation=================================================
 
 //capacity = 1 because the pointer is pointing to somewhere
-template<class T>
+template<typename T>
 Vector<T>::Vector() : length(0), cap(1), array(new T[1]) {}
 
 //this vector address some corner cases such as n < 0 and capacity <= 0.
-template<class T>
+template<typename T>
 Vector<T>::Vector(int n) : length((n < 0) ? 0 : n), cap((n <= 0) ? 1 : n), array(new T[cap]) {}
 
 
 //destructor
-template<class T>
+template<typename T>
 Vector<T>::~Vector(){
     delete[] array;
     length = 0;
@@ -158,14 +162,14 @@ Vector<T>::~Vector(){
 
 }
 
-template<class T>
+template<typename T>
 Vector<T>::Vector(const Vector<T>& newVec) : length(newVec.length), cap(newVec.cap), array(new T[newVec.cap]) {
     for (int i = 0; i < length; ++i) {
         array[i] = newVec.array[i];
     }
 }
 
-template<class T>
+template<typename T>
 Vector<T> &Vector<T>::operator = (const Vector<T> &newVec){
     if (this == &newVec) return *this;
 
@@ -181,37 +185,44 @@ Vector<T> &Vector<T>::operator = (const Vector<T> &newVec){
     return *this;
 }
 
-template<class T>
+template<typename T>
 T &Vector<T>::operator[](int i){
-    return array[i];
+	assert(i >= 0 && i < length);
+	return array[i];
 }
 
-template<class T>
+template<typename T>
 const T &Vector<T>::operator[](int i) const{
+	assert(i >= 0 && i < length);
     return array[i];
 }
 
-template<class T>
+template<typename T>
 int Vector<T>::size() const{
     return length;
 }
 
-template<class T>
+template<typename T>
 void Vector<T>::add_to_back(const T& value){
     if(length >= cap){
         int newCap = (cap == 0) ? 1 : cap * 2;
-        T* newArray = new T[newCap];
-        for(int i = 0; i < length; i++){
-            newArray[i] = array[i];
-        }
-        delete[] array;
-        array = newArray;
-        cap = newCap;
+		resize(newCap);
     }
-    array[length] = value;
-    ++length;
+	array[length++] = value;
 }
 
+
+template<typename T>
+void Vector<T>::resize(int newCapacity) {
+	if (newCapacity <= cap) return;
+	T* newArray = new T[newCapacity];
+	for (int i = 0; i < length; i++) {
+		newArray[i] = array[i];
+	}
+	delete[] array;
+	array = newArray;
+	cap = newCapacity;
+}
 
 
 #endif // VECTOR_H_INCLUDED

@@ -15,7 +15,7 @@ void outputSPEEDtoCMD(const Vector<SensorRecType>& sensorData, double avg, doubl
 	}
 }
 
-void outputTEMPtoCMD(SensorlogType1& sensorData, int year) {
+void outputTEMPtoCMD(SensorlogType& sensorData, int year) {
 	try {
 		for (int i = 1; i <= monthNum; ++i) {
 			Vector<SensorRecType> newDataX;
@@ -39,7 +39,7 @@ void outputTEMPtoCMD(SensorlogType1& sensorData, int year) {
 	}
 }
 
-void outputToCMDforS_T_R_SPCC_Combination(SensorlogType1& sensorData, int month) {
+void outputToCMDforS_T_R_SPCC_Combination(SensorlogType& sensorData, int month) {
 	Vector<SensorRecType> newDataX;
 	dataFilter(sensorData, newDataX, month, -1);
 
@@ -54,14 +54,14 @@ void outputToCMDforS_T_R_SPCC_Combination(SensorlogType1& sensorData, int month)
 	std::cout << "T_R " << std::fixed << std::setprecision(2) << T_R << "\n\n";
 }
 
-void outputWholeDATAtoCMD(SensorlogType1& sensorData, int year) {
+void outputWholeDATAtoCMD(SensorlogType& sensorData, int year) {
 	try {
 		std::cout << "\n" << year << "\n";
 
 		std::cout << "Month,Average Wind Speed(stdev, mad), Average Ambient Temperature(stdev, mad), Solar Radiation\n\n";
 
 		for (int i = 1; i <= monthNum; ++i) {
-			SensorlogType newDataX = Vector<SensorRecType>();
+			SensorlogTypeVector newDataX = Vector<SensorRecType>();
 			dataFilter(sensorData, newDataX, i, year);
 
 			double SRsum = calSumForSolar(newDataX, SR_XTR);
@@ -90,7 +90,7 @@ void outputWholeDATAtoCMD(SensorlogType1& sensorData, int year) {
 }
 
 
-void outputWholeDATAtoCSV(std::string name, SensorlogType1& wholeData, int year) {
+void outputWholeDATAtoCSV(std::string name, SensorlogType& wholeData, int year) {
 	std::ofstream outFile(name);
 	if (!outFile.is_open()) {
 		throw std::runtime_error("Cannot open the output file. Please check again.\n");
@@ -99,7 +99,7 @@ void outputWholeDATAtoCSV(std::string name, SensorlogType1& wholeData, int year)
 	outputToCSV(outFile, wholeData, year);
 }
 
-void outputToCSV(std::ofstream& outFile, SensorlogType1& sensorData, const int year) {
+void outputToCSV(std::ofstream& outFile, SensorlogType& sensorData, const int year) {
 	outFile << "Year" << "," << year << "\n";
 	outFile << "Month,"
 		<< "\"Average Wind Speed(stdev, mad)\","
@@ -108,7 +108,7 @@ void outputToCSV(std::ofstream& outFile, SensorlogType1& sensorData, const int y
 
 
 	for (int i = 1; i <= monthNum; ++i) {
-		SensorlogType newDataX = Vector<SensorRecType>();
+		SensorlogTypeVector newDataX = Vector<SensorRecType>();
 		dataFilter(sensorData, newDataX, i, year);
 
 		double SRsum = calSumForSolar(newDataX, SR_XTR);

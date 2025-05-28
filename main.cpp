@@ -22,7 +22,7 @@ int main() {
     {
         auto t_start = std::chrono::high_resolution_clock::now();
 
-        SensorlogType1 sensorData;
+        SensorlogType sensorData;
         loadSource(sensorData);
 
         auto t_end = std::chrono::high_resolution_clock::now();

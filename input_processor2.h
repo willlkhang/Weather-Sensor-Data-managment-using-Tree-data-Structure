@@ -19,11 +19,11 @@
 //---------------------------------------------------------------------------------
 
 
-void loadSource(SensorlogType1& sensorData);
+void loadSource(SensorlogType& sensorData);
 
-void loadCSV(SensorlogType1& sensorData, std::string csvName);
+void loadCSV(SensorlogType& sensorData, std::string csvName);
 
-void processCSVtoSensorData(SensorlogType1& sensorData, std::istream& inFile);
+void processCSVtoSensorData(SensorlogType& sensorData, std::istream& inFile);
 
 Vector<std::string> readHeader(std::istream& input);
 

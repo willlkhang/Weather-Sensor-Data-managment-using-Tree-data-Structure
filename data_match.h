@@ -12,7 +12,7 @@
 #include "data_structure_enumeration.h"
 
 Vector<double> dataFieldFilter(const Vector<SensorRecType>& data, const SensorDataField type);
-void dataFilter(SensorlogType1& sensor_data, SensorlogType& newData, const int month, const int year);
+void dataFilter(SensorlogType& sensor_data, SensorlogTypeVector& newData, const int month, const int year);
 
 
 #endif // DATA_MATCH_H

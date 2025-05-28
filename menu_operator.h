@@ -20,14 +20,14 @@
 
 void outputSPEEDtoCMD(const Vector<SensorRecType>& sensorData, double avg, double stdev);
 
-void outputTEMPtoCMD(SensorlogType1& wholeData, int year);
+void outputTEMPtoCMD(SensorlogType& wholeData, int year);
 
-void outputToCMDforS_T_R_SPCC_Combination(SensorlogType1& sensorData, int month);
+void outputToCMDforS_T_R_SPCC_Combination(SensorlogType& sensorData, int month);
 
-void outputWholeDATAtoCMD(SensorlogType1& wholeData, int year);
+void outputWholeDATAtoCMD(SensorlogType& wholeData, int year);
 
-void outputWholeDATAtoCSV(std::string name, SensorlogType1& wholeData, int year);
+void outputWholeDATAtoCSV(std::string name, SensorlogType& wholeData, int year);
 
-void outputToCSV(std::ofstream& outFile, SensorlogType1& wholeData, const int year);
+void outputToCSV(std::ofstream& outFile, SensorlogType& wholeData, const int year);
 
 #endif // DATA_PRINTER_H

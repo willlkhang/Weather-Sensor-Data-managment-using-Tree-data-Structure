@@ -1,6 +1,6 @@
 #include "menu.h"
 
-void menu(SensorlogType1& sensorData) {
+void menu(SensorlogType& sensorData) {
 	bool stop = false;
 
 	//displayMenuBoard();
@@ -21,7 +21,7 @@ void displayMenuBoard() {
 	std::cout << "------------------------------------- End. --------------------------------------\n";
 }
 
-bool menuOptionInteraction(SensorlogType1& sensorData) {
+bool menuOptionInteraction(SensorlogType& sensorData) {
 	int option = inputOption();
 
 	switch (option) {

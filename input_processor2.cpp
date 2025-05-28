@@ -1,6 +1,6 @@
 #include "input_processor2.h"
 
-void loadSource(SensorlogType1& sensorData) {
+void loadSource(SensorlogType& sensorData) {
 
     std::ifstream sourceFile("data/data_source1.txt");
 
@@ -14,7 +14,7 @@ void loadSource(SensorlogType1& sensorData) {
     }
 }
 
-void loadCSV(SensorlogType1& sensorData, std::string csvName) {
+void loadCSV(SensorlogType& sensorData, std::string csvName) {
 
     std::ifstream inFile(csvName);
 
@@ -23,7 +23,7 @@ void loadCSV(SensorlogType1& sensorData, std::string csvName) {
     std::cout << "Load " << csvName << " sucessfully\n";
 }
 
-void processCSVtoSensorData(SensorlogType1& sensorData, std::istream& inFile) {
+void processCSVtoSensorData(SensorlogType& sensorData, std::istream& inFile) {
 
     Vector<std::string> headerVec = readHeader(inFile);
 
