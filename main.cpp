@@ -17,7 +17,6 @@ void print(K& key, V& value);
 
 int main() {
 
-    //RBMap<std::string, SensorlogType> store;
     try
     {
         auto t_start = std::chrono::high_resolution_clock::now();

@@ -18,16 +18,20 @@
 
 //---------------------------------------------------------------------------------
 
-void outputSPEEDtoCMD(const Vector<SensorRecType>& sensorData, double avg, double stdev);
+void outputSPEEDtoCMDprocessing(const Vector<SensorRecType>& sensorData, double avg, double stdev);
 
-void outputTEMPtoCMD(SensorlogType& wholeData, int year);
+void outputTEMPtoCMDprocessing(SensorlogType& wholeData, int year);
 
-void outputToCMDforS_T_R_SPCC_Combination(SensorlogType& sensorData, int month);
+void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month);
 
-void outputWholeDATAtoCMD(SensorlogType& wholeData, int year);
+void outputWholeDATAtoCMDprocessing(SensorlogType& wholeData, int year);
 
-void outputWholeDATAtoCSV(std::string name, SensorlogType& wholeData, int year);
+void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, int year);
 
-void outputToCSV(std::ofstream& outFile, SensorlogType& wholeData, const int year);
+void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& wholeData, const int year);
+
+
+void displaySPCCforAllData(double S_T, double S_R, double T_R, int month);
+void displayTEMPdata(double avg, double stddvi);
 
 #endif // DATA_PRINTER_H
