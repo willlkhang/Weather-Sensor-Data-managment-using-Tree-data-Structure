@@ -2,7 +2,7 @@
 
 void loadSource(SensorlogType1& sensorData) {
 
-    std::ifstream sourceFile("data/data_source.txt");
+    std::ifstream sourceFile("data/data_source1.txt");
 
     if (!sourceFile) throw std::runtime_error("There is no data_source.txt\n");
 

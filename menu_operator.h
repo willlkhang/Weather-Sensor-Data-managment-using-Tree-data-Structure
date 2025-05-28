@@ -1,32 +1,33 @@
-// menu_operator.h
-
+// data_printer.h
 
 //---------------------------------------------------------------------------------
 
-#ifndef MENU_OPERATOR_H_INCLUDED
-#define MENU_OPERATOR_H_INCLUDED
+#ifndef DATA_PRINTER_H_INCLUDED
+#define DATA_PRINTER_H_INCLUDED
 
 //---------------------------------------------------------------------------------
 
 #include <iostream>
+#include <iomanip>
+#include <string>
 
-#include "input_processor2.h"
-#include "data_match.h"
-#include "user_input.h"
-#include "data_printer.h"
+#include "io_operator.h"
 #include "data_calculator.h"
+#include "data_match.h"
 #include "data_structure.h"
 
 //---------------------------------------------------------------------------------
 
-void SPEEDAvgVsStdDeviForSPECMonthvsYear(SensorlogType1& sensor_data);
+void outputSPEEDtoCMD(const Vector<SensorRecType>& sensorData, double avg, double stdev);
 
-void TEMPAvgVsStdDeviForEACHMonthvsYear(SensorlogType1& sensor_data);
+void outputTEMPtoCMD(SensorlogType1& wholeData, int year);
 
-void S_T_R_SPCC_Combination(SensorlogType1& sensorData);
+void outputToCMDforS_T_R_SPCC_Combination(SensorlogType1& sensorData, int month);
 
-//void TotalSolarRadiationKwhm2ForEACHMonthvsYear(SensorlogType1& sensor_data);
+void outputWholeDATAtoCMD(SensorlogType1& wholeData, int year);
 
-void AnnualSensorReportToCSV(SensorlogType1& sensor_data);
+void outputWholeDATAtoCSV(std::string name, SensorlogType1& wholeData, int year);
 
-#endif
+void outputToCSV(std::ofstream& outFile, SensorlogType1& wholeData, const int year);
+
+#endif // DATA_PRINTER_H
