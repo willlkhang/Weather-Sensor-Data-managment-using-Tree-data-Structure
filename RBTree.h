@@ -19,47 +19,6 @@ enum class TreeColor { RED, BLACK };
 //---------------------------------------------------------------------------------
 
 /**
- * @struct RBTNode
- * @brief Represents a node in a Red-Black Tree
- *
- * Stores a value, color, and pointers to left, right, and parent nodes.
- * Used as the building block for the Red-Black Tree structure.
- *
- * @tparam T The type of value stored in the node
- * @author Minh Khang Nguyen
- * @version 01
- * @todo Add validation for node initialization
- */
-template<typename T>
-struct RBTNode {
-
-    /// The value stored in the node
-    T value;
-    /// The color of the node (RED or BLACK)
-    TreeColor color;
-    /// Pointer to the left child node
-    RBTNode* left;
-    /// Pointer to the right child node
-    RBTNode* right;
-    /// Pointer to the parent node
-    RBTNode* parent;
-
-
-    /**
-     * @brief Constructor for RBTNode
-     *
-     * Initializes a node with a given value, sets color to RED, and nullifies pointers.
-     *
-     * @param v The value to store in the node
-     * @return void
-     * @post Node is initialized with value v, color RED, and null pointers
-     */
-    RBTNode(const T& v) : value(v), color(TreeColor::RED), left(nullptr), right(nullptr), parent(nullptr) {
-    }
-};
-
-
-/**
  * @class RBTree
  * @brief A Red-Black Tree data structure
  *
@@ -207,8 +166,25 @@ public:
     bool operator!() const;
 
 private:
+
+    struct RBTNode {
+
+        /// The value stored in the node
+        T value;
+        /// The color of the node (RED or BLACK)
+        TreeColor color;
+        /// Pointer to the left child node
+        RBTNode* left;
+        /// Pointer to the right child node
+        RBTNode* right;
+        /// Pointer to the parent node
+        RBTNode* parent;
+
+        explicit RBTNode(const T& v);
+    };
+
     /// Pointer to the root node of the tree
-    RBTNode<T>* root;
+    RBTNode* root;
 
     /**
      * @brief Recursively inserts a node
@@ -222,7 +198,7 @@ private:
      * @pre Value type T must support comparison operators
      * @post Value is inserted into the subtree
      */
-    RBTNode<T>* insertRecursive(RBTNode<T>* node, RBTNode<T>* parent, const T& value);
+    RBTNode* insertRecursive(RBTNode* node, RBTNode* parent, const T& value);
 
     /**
      * @brief Fixes Red-Black Tree properties after insertion
@@ -234,7 +210,7 @@ private:
      * @pre Node must be part of the tree
      * @post Tree satisfies Red-Black properties
      */
-    void fixInsert(RBTNode<T>* node);
+    void fixInsert(RBTNode* node);
 
     /**
      * @brief Performs a left rotation
@@ -246,7 +222,7 @@ private:
      * @pre Node x must have a right child
      * @post Subtree is rotated, pointers updated
      */
-    void leftRotate(RBTNode<T>* x);
+    void leftRotate(RBTNode* x);
 
     /**
      * @brief Performs a right rotation
@@ -258,7 +234,7 @@ private:
      * @pre Node y must have a left child
      * @post Subtree is rotated, pointers updated
      */
-    void rightRotate(RBTNode<T>* y);
+    void rightRotate(RBTNode* y);
 
     /**
      * @brief Recursive in-order traversal
@@ -271,7 +247,7 @@ private:
      * @pre Node must be part of the tree
      * @post Function f1 is applied to values in in-order
      */
-    void inOrderRecursive(f1Typ f1, RBTNode<T>* node) const;
+    void inOrderRecursive(f1Typ f1, RBTNode* node) const;
 
     /**
      * @brief Recursive pre-order traversal
@@ -284,7 +260,7 @@ private:
      * @pre Node must be part of the tree
      * @post Function f1 is applied to values in pre-order
      */
-    void preOrderRecursive(f1Typ f1, RBTNode<T>* node) const;
+    void preOrderRecursive(f1Typ f1, RBTNode* node) const;
 
     /**
      * @brief Recursive post-order traversal
@@ -297,7 +273,7 @@ private:
      * @pre Node must be part of the tree
      * @post Function f1 is applied to values in post-order
      */
-    void postOrderRecursive(f1Typ f1, RBTNode<T>* node) const;
+    void postOrderRecursive(f1Typ f1, RBTNode* node) const;
 
 
     /**
@@ -311,7 +287,7 @@ private:
      * @pre Node must be part of the tree
      * @post Returns true if target exists in subtree, false otherwise
      */
-    bool deepRecursive(RBTNode<T>* node, const T& target);
+    bool deepRecursive(RBTNode* node, const T& target);
 
     /**
      * @brief Deletes all nodes in the tree
@@ -323,7 +299,7 @@ private:
      * @pre Node must be part of the tree
      * @post All nodes in subtree are deleted
      */
-    void deleteTree(RBTNode<T>* node);
+    void deleteTree(RBTNode* node);
 
     /**
      * @brief Copies a subtree
@@ -336,7 +312,7 @@ private:
      * @pre Node must be part of a valid tree
      * @post Returns a deep copy of the subtree
      */
-    RBTNode<T>* copyTree(RBTNode<T>* node, RBTNode<T>* parent);
+    RBTNode* copyTree(RBTNode* node, RBTNode* parent);
 };
 
 //===========================Public===============
@@ -394,10 +370,10 @@ template<typename T>
 bool RBTree<T>::BFS(const T& target) {
     if (!root) return false;
 
-    std::queue<RBTNode<T>*> q;
+    std::queue<RBTNode*> q;
     q.push(root);
     while (!q.empty()) {
-        RBTNode<T>* cur = q.front(); q.pop();
+        RBTNode* cur = q.front(); q.pop();
         if (cur->value == target) return true;
         if (cur->left) q.push(cur->left);
         if (cur->right) q.push(cur->right);
@@ -414,9 +390,9 @@ bool RBTree<T>::operator!() const {
 //============================Private==============
 
 template<typename T>
-RBTNode<T>* RBTree<T>::insertRecursive(RBTNode<T>* node, RBTNode<T>* parent, const T& value) {
+typename RBTree<T>::RBTNode* RBTree<T>::insertRecursive(RBTNode* node, RBTNode* parent, const T& value) {
     if (!node) {
-        RBTNode<T>* newNode = new RBTNode<T>(value);
+        RBTNode* newNode = new RBTNode(value);
         newNode->parent = parent;
         return newNode;
     }
@@ -430,10 +406,10 @@ RBTNode<T>* RBTree<T>::insertRecursive(RBTNode<T>* node, RBTNode<T>* parent, con
 }
 
 template<typename T>
-void RBTree<T>::fixInsert(RBTNode<T>* z) {
+void RBTree<T>::fixInsert(RBTNode* z) {
     while (z->parent && z->parent->color == TreeColor::RED) {
         if (z->parent == z->parent->parent->left) {
-            RBTNode<T>* y = z->parent->parent->right;
+            RBTNode* y = z->parent->parent->right;
             if (y && y->color == TreeColor::RED) {
                 z->parent->color = TreeColor::BLACK;
                 y->color = TreeColor::BLACK;
@@ -451,7 +427,7 @@ void RBTree<T>::fixInsert(RBTNode<T>* z) {
             }
         }
         else {
-            RBTNode<T>* y = z->parent->parent->left; // Uncle
+            RBTNode* y = z->parent->parent->left; // Uncle
             if (y && y->color == TreeColor::RED) {
                 z->parent->color = TreeColor::BLACK;
                 y->color = TreeColor::BLACK;
@@ -473,8 +449,8 @@ void RBTree<T>::fixInsert(RBTNode<T>* z) {
 }
 
 template<typename T>
-void RBTree<T>::leftRotate(RBTNode<T>* x) {
-    RBTNode<T>* y = x->right;
+void RBTree<T>::leftRotate(RBTNode* x) {
+    RBTNode* y = x->right;
     x->right = y->left;
     if (y->left) y->left->parent = x;
     y->parent = x->parent;
@@ -492,8 +468,8 @@ void RBTree<T>::leftRotate(RBTNode<T>* x) {
 }
 
 template<typename T>
-void RBTree<T>::rightRotate(RBTNode<T>* y) {
-    RBTNode<T>* x = y->left;
+void RBTree<T>::rightRotate(RBTNode* y) {
+    RBTNode* x = y->left;
     y->left = x->right;
     if (x->right) x->right->parent = y;
     x->parent = y->parent;
@@ -511,7 +487,7 @@ void RBTree<T>::rightRotate(RBTNode<T>* y) {
 }
 
 template<typename T>
-void RBTree<T>::inOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
+void RBTree<T>::inOrderRecursive(f1Typ f1, RBTNode* node) const {
     if (!node) return;
     inOrderRecursive(f1, node->left);
     f1(node->value);
@@ -519,7 +495,7 @@ void RBTree<T>::inOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
 }
 
 template<typename T>
-void RBTree<T>::preOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
+void RBTree<T>::preOrderRecursive(f1Typ f1, RBTNode* node) const {
     if (!node) return;
     f1(node->value);
     preOrderRecursive(f1, node->left);
@@ -527,7 +503,7 @@ void RBTree<T>::preOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
 }
 
 template<typename T>
-void RBTree<T>::postOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
+void RBTree<T>::postOrderRecursive(f1Typ f1, RBTNode* node) const {
     if (!node) return;
     postOrderRecursive(f1, node->left);
     postOrderRecursive(f1, node->right);
@@ -535,7 +511,7 @@ void RBTree<T>::postOrderRecursive(f1Typ f1, RBTNode<T>* node) const {
 }
 
 template<typename T>
-bool RBTree<T>::deepRecursive(RBTNode<T>* node, const T& target) {
+bool RBTree<T>::deepRecursive(RBTNode* node, const T& target) {
     if (!node) return false;
     if (node->value == target) return true;
     if (deepRecursive(node->left, target)) return true;
@@ -543,7 +519,7 @@ bool RBTree<T>::deepRecursive(RBTNode<T>* node, const T& target) {
 }
 
 template<typename T>
-void RBTree<T>::deleteTree(RBTNode<T>* node) {
+void RBTree<T>::deleteTree(RBTNode* node) {
     if (!node) return;
     deleteTree(node->left);
     deleteTree(node->right);
@@ -551,9 +527,9 @@ void RBTree<T>::deleteTree(RBTNode<T>* node) {
 }
 
 template<typename T>
-RBTNode<T>* RBTree<T>::copyTree(RBTNode<T>* node, RBTNode<T>* parent) {
+typename RBTree<T>::RBTNode* RBTree<T>::copyTree(RBTNode* node, RBTNode* parent) {
     if (!node) return nullptr;
-    RBTNode<T>* newNode = new RBTNode<T>(node->value);
+    RBTNode* newNode = new RBTNode(node->value);
     newNode->color = node->color;
     newNode->parent = parent;
     newNode->left = copyTree(node->left, newNode);
@@ -561,5 +537,7 @@ RBTNode<T>* RBTree<T>::copyTree(RBTNode<T>* node, RBTNode<T>* parent) {
     return newNode;
 }
 
+template<typename T>
+RBTree<T>::RBTNode::RBTNode(const T& v) : value(v), color(TreeColor::RED), left(nullptr), right(nullptr), parent(nullptr) {}
 
 #endif
