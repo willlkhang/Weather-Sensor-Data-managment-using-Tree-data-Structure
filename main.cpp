@@ -18,21 +18,26 @@ void print(K& key, V& value);
 int main() {
 
     //RBMap<std::string, SensorlogType> store;
+    try
+    {
+        auto t_start = std::chrono::high_resolution_clock::now();
 
-    auto t_start = std::chrono::high_resolution_clock::now();
+        SensorlogType1 sensorData;
+        loadSource(sensorData);
 
-    SensorlogType1 sensorData;
-    loadSource(sensorData);
-
-    auto t_end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = t_end - t_start;
-    std::cout << "Loading time: " << elapsed.count() << " s\n";
-
-
-    std::cout << sensorData.size() << "\n";
+        auto t_end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed = t_end - t_start;
+        std::cout << "Loading time: " << elapsed.count() << " s\n";
 
 
-    menu(sensorData);
+        std::cout << sensorData.size() << "\n";
+
+
+        menu(sensorData);
+    }
+    catch (std::exception& e) {
+        std::cerr << "Error : " << e.what() << "\n";
+    }
 
     return 0;
 }
