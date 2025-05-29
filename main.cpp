@@ -18,7 +18,7 @@ int main() {
         SensorlogType sensorData;
         loadSource(sensorData);
 
-        std::cout << sensorData.size() << "\n";
+        //std::cout << sensorData.size() << "\n";
         menu(sensorData);
     }
     catch (std::exception& e) {

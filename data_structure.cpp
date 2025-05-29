@@ -4,28 +4,6 @@
 #include "data_structure.h"
 
 ////----------------------------------------------------------------------------
-//
-//// Greater than operator for WeatherRecord.
-//bool operator>(const WeatherRecord& lhs, const WeatherRecord& rhs) {
-//	if (lhs.date > rhs.date) return true;
-//	if (lhs.date < rhs.date) return false;
-//	return (lhs.time > rhs.time);
-//}
-//
-////----------------------------------------------------------------------------
-//
-//// Equality operator for WeatherRecord.
-//bool operator==(const WeatherRecord& lhs, const WeatherRecord& rhs) {
-//	return lhs.date == rhs.date &&
-//		lhs.time == rhs.time;
-//}
-
-//// Less than operator for WeatherRecord.
-//bool operator<(const WeatherRecord& lhs, const WeatherRecord& rhs) {
-//	if (lhs.date < rhs.date) return true;
-//	if (lhs.date > rhs.date) return false;
-//	return (lhs.time < rhs.time);
-//}
 
 bool operator<(const SensorRecType& here, const SensorRecType& there) {
 	if (here.d < there.d) return true;

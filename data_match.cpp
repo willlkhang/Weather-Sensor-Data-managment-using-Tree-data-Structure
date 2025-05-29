@@ -31,20 +31,20 @@ Vector<double> dataFieldFilter(const Vector<SensorRecType>& data, const SensorDa
 void dataFilter(SensorlogType& sensorData, SensorlogTypeVector&newData,const int month = -1, const int year = -1) {
 	Vector<SensorRecType> tmpVec;
 	if (year != -1 && month != -1) {
-		sensorData[year][month].inOrder(DataExtractor::extractData);
+		sensorData[year][month].inOrder(DataExtractor<SensorRecType>::extractData);
 	}
 	else if (year != -1 && month == -1) {
 		for (int i = 0; i < sensorData[year].size(); i++) {
-			sensorData[year][i].inOrder(DataExtractor::extractData);
+			sensorData[year][i].inOrder(DataExtractor<SensorRecType>::extractData);
 		}
 	}
     else if (year == -1 && month != -1) {
         for (int i = 0; i < sensorData.size(); i++) {
-            sensorData[i][month].inOrder(DataExtractor::extractData);
+            sensorData[i][month].inOrder(DataExtractor<SensorRecType>::extractData);
         }
     }
-	
-	newData = DataExtractor::getExtractedData();
 
-	DataExtractor::clearExtractedData();
+	newData = DataExtractor<SensorRecType>::getExtractedData();
+
+	DataExtractor<SensorRecType>::clearExtractedData();
 }
