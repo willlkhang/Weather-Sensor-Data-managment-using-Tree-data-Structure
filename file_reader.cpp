@@ -1,8 +1,8 @@
 #include "file_reader.h"
 
-void loadSource(SensorlogType& sensorData) {
+void loadSource(SensorlogType& sensorData, std::string fileName) {
 
-    std::ifstream sourceFile("data/data_source1.txt");
+    std::ifstream sourceFile(fileName);
 
     if (!sourceFile) throw std::runtime_error("There is no data_source.txt\n");
 

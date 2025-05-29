@@ -18,7 +18,7 @@ add_executable(MyProgram
              menu_controller.cpp
              data_match.cpp
              input_processor.cpp
-             data_structure.cpp
+             
              csv_writer.cpp
              file_reader.cpp
              data_printer.cpp
