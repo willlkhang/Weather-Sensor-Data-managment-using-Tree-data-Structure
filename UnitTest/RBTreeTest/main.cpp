@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <string>
-#include "hashMap.h"
-#include "RBTree.h"
-#include "vector.h"
-#include "DataExtractor.h"
+#include "../../hashMap.h"
+#include "../../RBTree.h"
+#include "../../vector.h"
+#include "../../DataExtractor.h"
 
 void testInsertPair();
 void testRmoveByKey();
@@ -98,9 +98,9 @@ void testExtractingMapAndTreeToVectorWithScopeDimension2() {
     map[2][0] = tree2;
     map[2][1] = tree;
 
-    map[2][0].inOrder(DataExtractor::extractData);
+    map[2][0].inOrder(DataExtractor<std::string>::extractData);
 
-    Vector<std::string> vec = DataExtractor::getExtractedData();
+    Vector<std::string> vec = DataExtractor<std::string>::getExtractedData();
 
     int count = 0;
     for (int i = 0; i < vec.size(); i++) {
@@ -111,7 +111,7 @@ void testExtractingMapAndTreeToVectorWithScopeDimension2() {
         if (count % 5 == 0) std::cout << "\n";
     }
 
-    DataExtractor::clearExtractedData();
+    DataExtractor<std::string>::clearExtractedData();
 
     std::cout << "testExtractingMapAndTreeToVectorWithScopeDimension1: Passed\n\n";
 
@@ -141,10 +141,10 @@ void testExtractingMapAndTreeToVectorWithScopeDimension1() {
     map[2][1] = tree;
 
     for (int i = 0; i < map[1].size(); i++) {
-        map[1][i].inOrder(DataExtractor::extractData);
+        map[1][i].inOrder(DataExtractor<std::string>::extractData);
     }
 
-    Vector<std::string> vec = DataExtractor::getExtractedData();
+    Vector<std::string> vec = DataExtractor<std::string>::getExtractedData();
 
     int count = 0;
     for (int i = 0; i < vec.size(); i++) {
@@ -155,7 +155,7 @@ void testExtractingMapAndTreeToVectorWithScopeDimension1() {
         if (count % 5 == 0) std::cout << "\n";
     }
 
-    DataExtractor::clearExtractedData();
+    DataExtractor<std::string>::clearExtractedData();
 
     std::cout << "testExtractingMapAndTreeToVectorWithScopeDimension1: Passed\n\n";
 
@@ -179,11 +179,11 @@ void testExtractingMapAndTreeToVector() {
 
     for (int i = 0; i < map.size(); i++) {
         for (int j = 0; j < map[i].size(); j++) {
-            map[i][j].inOrder(DataExtractor::extractData);
+            map[i][j].inOrder(DataExtractor<std::string>::extractData);
         }
     }
 
-    Vector<std::string> vec = DataExtractor::getExtractedData();
+    Vector<std::string> vec = DataExtractor<std::string>::getExtractedData();
 
     int count = 0;
     for (int i = 0; i < vec.size(); i++) {
@@ -194,7 +194,7 @@ void testExtractingMapAndTreeToVector() {
         if (count % 5 == 0) std::cout << "\n";
     }
 
-    DataExtractor::clearExtractedData();
+    DataExtractor<std::string>::clearExtractedData();
 
     std::cout << "testExtractingMapAndTreeToVector: Passed\n\n";
 }

@@ -1,7 +1,6 @@
 #ifndef RBTREE_H_INCLUDED
 #define RBTREE_H_INCLUDED
 
-#include <queue>
 #include <stdexcept>
 
 //---------------------------------------------------------------------------------
@@ -129,18 +128,6 @@ public:
      */
     void postOrder(f1Typ f1) const;
 
-
-    /**
-     * @brief Searches for a value using breadth-first search
-     *
-     * Performs a BFS to find a target value in the tree.
-     *
-     * @param target The value to search for
-     * @return bool True if target is found, false otherwise
-     * @pre Tree must be initialized
-     * @post Returns true if target exists, false otherwise
-     */
-    bool BFS(const T& target);
 
     /**
      * @brief Searches for a value using depth-first search
@@ -366,21 +353,6 @@ bool RBTree<T>::DFSearch(const T& target) {
     return deepRecursive(root, target);
 }
 
-template<typename T>
-bool RBTree<T>::BFS(const T& target) {
-    if (!root) return false;
-
-    std::queue<RBTNode*> q;
-    q.push(root);
-    while (!q.empty()) {
-        RBTNode* cur = q.front(); q.pop();
-        if (cur->value == target) return true;
-        if (cur->left) q.push(cur->left);
-        if (cur->right) q.push(cur->right);
-    }
-
-    return false;
-}
 
 template<typename T>
 bool RBTree<T>::operator!() const {
