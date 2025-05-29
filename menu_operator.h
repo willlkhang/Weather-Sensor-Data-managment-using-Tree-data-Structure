@@ -16,6 +16,7 @@
 #include "data_match.h"
 #include "data_structure.h"
 #include "data_printer.h"
+#include "csv_writer.h"
 
 //---------------------------------------------------------------------------------
 
