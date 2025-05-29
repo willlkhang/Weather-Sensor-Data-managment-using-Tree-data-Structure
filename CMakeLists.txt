@@ -20,5 +20,6 @@ add_executable(MyProgram
              input_processor2.cpp
              data_structure.cpp
              csv_writer.cpp
+             file_reader.cpp
              data_printer.cpp
              )

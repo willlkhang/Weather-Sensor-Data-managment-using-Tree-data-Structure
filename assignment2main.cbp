@@ -78,6 +78,12 @@
 		<Unit filename="date.h">
 			<Option virtualFolder="data_struct/date/" />
 		</Unit>
+		<Unit filename="file_reader.cpp">
+			<Option virtualFolder="File IO/Read CSV/" />
+		</Unit>
+		<Unit filename="file_reader.h">
+			<Option virtualFolder="File IO/Read CSV/" />
+		</Unit>
 		<Unit filename="hashMap.h">
 			<Option virtualFolder="data_struct/data_structure/" />
 		</Unit>

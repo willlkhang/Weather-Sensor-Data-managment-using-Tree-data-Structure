@@ -15,11 +15,10 @@
 #include <iomanip>
 
 #include "RBmap.h"
+#include "file_reader.h"
 
 //---------------------------------------------------------------------------------
 
-
-void loadSource(SensorlogType& sensorData);
 
 void loadCSV(SensorlogType& sensorData, std::string csvName);
 

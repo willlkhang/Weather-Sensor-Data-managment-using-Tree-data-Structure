@@ -33,10 +33,4 @@ void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, 
 void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& wholeData, const int year);
 
 
-//make another .cpp and .h files for data printing
-
-void writeDataHeaderToCSV(std::ofstream& outFile, const int year);
-void writeWholeDataToCSV(std::ostream& outFile, double SPEEDavg, double SPEEDstddvi,
-	double SPEEDmad, double TEMPavg, double TEMPstddvi, double TEMPmad, double SRsum, int month);
-
 #endif // DATA_PRINTER_H
