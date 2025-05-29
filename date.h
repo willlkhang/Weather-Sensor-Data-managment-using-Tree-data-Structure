@@ -122,10 +122,6 @@ public:
 	 */
 	int GetYear() const;
 
-	bool operator<(const Date& other) const;
-	bool operator>(const Date& other) const;
-	bool operator==(const Date& other) const;
-
 
 private:
 	/// Day of the month

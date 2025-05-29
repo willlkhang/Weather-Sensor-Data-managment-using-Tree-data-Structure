@@ -66,10 +66,6 @@ public:
          */
     int GetMinute() const;
 
-    bool operator>(const Time& other) const;
-    bool operator<(const Time& other) const;
-    bool operator==(const Time& other) const;
-
 private:
     /// Hour of the day (0-23)
     int hour;

@@ -43,12 +43,6 @@ void dataFilter(SensorlogType& sensorData, SensorlogTypeVector&newData,const int
             sensorData[i][month].inOrder(DataExtractor<SensorRecType>::extractData);
         }
     }
-    /*else if (true) {
-        for (int i = 0; i < sensorData.size(); i++) {
-            if(sensorData[i][month].g)
-                sensorData[i][month].inOrder(DataExtractor<SensorRecType>::extractData);
-        }
-    }*/
 
 	newData = DataExtractor<SensorRecType>::getExtractedData();
 

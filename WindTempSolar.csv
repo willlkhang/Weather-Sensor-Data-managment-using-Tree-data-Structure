@@ -1,2 +1,5 @@
-Year,124
+Year,2016
 Month,"Average Wind Speed(stdev, mad)","Average Ambient Temperature(stdev, mad)",Solar Radiation
+January,"22.5259(10.3209, 7.99332)","24.9259(5.28424, 4.30869)",223.674
+February,"20.5773(9.71339, 7.65037)","23.9719(6.11644, 4.8574)",225.906
+March,"9.03273(5.74969, 5.06499)","16.2549(1.77988, 1.40481)",0.966429

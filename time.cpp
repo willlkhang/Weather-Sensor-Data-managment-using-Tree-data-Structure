@@ -30,19 +30,3 @@ void Time::SetMinute(int m){
 int Time::GetMinute() const{
     return minute;
 }
-
-
-bool Time::operator<(const Time& other) const {
-    if (hour < other.hour) return true;
-    if (hour > other.hour) return false;
-    return minute < other.minute;
-}
-bool Time::operator>(const Time& other) const {
-    if (hour > other.hour) return true;
-    if (hour < other.hour) return false;
-    return minute > other.minute;
-}
-
-bool Time::operator==(const Time& other) const {
-    return ((this->GetHour() == other.GetHour()) && (this->GetMinute() == other.GetMinute()));
-}

@@ -150,12 +150,4 @@ typedef Vector<SensorRecType> SensorlogTypeVector;
 
 typedef HashMap<int, HashMap<int, RBTree<SensorRecType>>> SensorlogType;
 
-
-bool operator<(const SensorRecType& here, const SensorRecType& there);
-bool operator>(const SensorRecType& here, const SensorRecType& there);
-bool operator==(const SensorRecType& here, const SensorRecType& there);
-
-
-
-
 #endif // DATA_STRUCTURE_H_INCLUDED

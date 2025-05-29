@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1748501822 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.cpp
+1748534920 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.cpp
 	"data_structure.h"
 
-1748453233 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.h
+1748534877 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.h
 	"date.h"
 	"time.h"
 	"vector.h"
@@ -10,12 +10,12 @@
 	"hashMap.h"
 	"RBTree.h"
 
-1747757758 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.h
+1748534606 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.h
 	<iostream>
 	<fstream>
 	<sstream>
 
-1747758854 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.h
+1748534759 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.h
 
 1748452767 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\vector.h
 	<cassert>
@@ -29,7 +29,7 @@
 	<queue>
 	<stdexcept>
 
-1747757764 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.cpp
+1748534665 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.cpp
 	"date.h"
 
 1745467506 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\io_operator.cpp
@@ -44,7 +44,7 @@
 	"time.h"
 	"data_structure.h"
 
-1747758857 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.cpp
+1748534795 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.cpp
 	"time.h"
 	<iostream>
 
@@ -89,15 +89,15 @@
 
 1747932702 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure_enumeration.h
 
-1748503872 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_match.cpp
+1748526952 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_match.cpp
 	"data_match.h"
 
 1748503316 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\dataextractor.cpp
 
-1748453523 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.cpp
+1748525291 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.cpp
 	"input_processor2.h"
 
-1748453339 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.h
+1748535152 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\input_processor2.h
 	"data_structure.h"
 	<string>
 	<fstream>
@@ -105,6 +105,8 @@
 	<sstream>
 	<iomanip>
 	"RBmap.h"
+	"file_reader.h"
+	"operator.h"
 
 1746600098 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\rbmap.h
 	<stdexcept>
@@ -130,7 +132,7 @@
 	"data_calculator.h"
 	"data_structure.h"
 
-1748500370 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.h
+1748527892 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.h
 	<iostream>
 	<iomanip>
 	<string>
@@ -139,6 +141,7 @@
 	"data_match.h"
 	"data_structure.h"
 	"data_printer.h"
+	"csv_writer.h"
 
 1748453472 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu.cpp
 	"menu.h"
@@ -146,14 +149,36 @@
 1748459417 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_controller.cpp
 	"menu_controller.h"
 
-1748500410 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.cpp
+1748528034 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\menu_operator.cpp
 	"menu_operator.h"
 
-1748500445 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_printer.cpp
+1748527535 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_printer.cpp
 	"data_printer.h"
 
 1748500490 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_printer.h
 	<iostream>
 	<iomanip>
 	"data_structure.h"
+
+1748524801 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\csv_writer.cpp
+	"csv_writer.h"
+
+1748524899 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\csv_writer.h
+	<iostream>
+	"data_structure.h"
+
+1748525331 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\file_reader.cpp
+	"file_reader.h"
+
+1748525346 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\file_reader.h
+	"data_structure.h"
+	"input_processor2.h"
+
+1748536162 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\operator.h
+	"date.h"
+	"time.h"
+	"data_calculator.h"
+
+1748536615 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\operator.cpp
+	"operator.h"
 

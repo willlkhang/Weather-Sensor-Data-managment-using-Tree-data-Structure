@@ -16,6 +16,7 @@
 
 #include "RBmap.h"
 #include "file_reader.h"
+#include "operator.h"
 
 //---------------------------------------------------------------------------------
 
@@ -37,4 +38,4 @@ void readDate(std::string& data, Date& date);
 int getColIndex(const Vector<std::string>& data, const std::string& target);
 
 
-#endif 
+#endif

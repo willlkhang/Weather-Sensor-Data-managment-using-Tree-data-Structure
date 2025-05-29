@@ -22,4 +22,5 @@ add_executable(MyProgram
              csv_writer.cpp
              file_reader.cpp
              data_printer.cpp
+             operator.cpp
              )
