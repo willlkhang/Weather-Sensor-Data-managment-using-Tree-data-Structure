@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1748516329 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\unittest\hashmaptest\main.cpp
+	<iostream>
+	<string>
+	"../../hashMap.h"
+	"../../RBTree.h"
+	"../../vector.h"
+	"../../DataExtractor.h"
+
+1748510198 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\hashmap.h
+	<iostream>
+	<functional>
+	<stdexcept>
+
+1748446875 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\rbtree.h
+	<queue>
+	<stdexcept>
+
+1748452767 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\vector.h
+	<cassert>
+
+1748503777 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\dataextractor.h
+	"vector.h"
+	"data_structure.h"
+
+1748453233 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\data_structure.h
+	"date.h"
+	"time.h"
+	"vector.h"
+	<string>
+	"hashMap.h"
+	"RBTree.h"
+
+1747757758 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\date.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1747758854 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\time.h
+

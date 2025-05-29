@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="UnitTest/DateTest/DateTest.cbp" />
+		<Project filename="UnitTest/MathTest/MathTest.cbp" />
+		<Project filename="UnitTest/TimeTest/TimeTest.cbp" />
+		<Project filename="UnitTest/VectorTest/VectorTest.cbp" />
+		<Project filename="UnitTest/UserInputTest/UserInputTest.cbp" />
+		<Project filename="assignment2main.cbp" />
+		<Project filename="UnitTest/RBTreeTest/RBTreeTest.cbp" />
+		<Project filename="UnitTest/HashMapTest/HashMapTest.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

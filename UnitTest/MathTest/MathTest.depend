@@ -21,3 +21,15 @@
 
 1745556231 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment1\ass1weathercompute\vector.h
 
+1744480996 source:c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\unittest\mathtest\mathtest.cpp
+	"../../math.h"
+	<iostream>
+	<cmath>
+
+1747893875 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\math.h
+	"vector.h"
+	<cmath>
+
+1748452767 c:\documents\documents\murdoch\2025, s1\ict283 - dsa\assignment2\ass2\vector.h
+	<cassert>
+
