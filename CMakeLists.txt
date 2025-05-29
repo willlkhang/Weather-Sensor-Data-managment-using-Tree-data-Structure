@@ -18,5 +18,6 @@ add_executable(MyProgram
              menu_controller.cpp
              data_match.cpp
              input_processor2.cpp
-             data_structure.cpp  
+             data_structure.cpp
+             data_printer.cpp
              DataExtractor.cpp)

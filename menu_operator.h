@@ -15,6 +15,7 @@
 #include "data_calculator.h"
 #include "data_match.h"
 #include "data_structure.h"
+#include "data_printer.h"
 
 //---------------------------------------------------------------------------------
 
@@ -32,12 +33,9 @@ void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& wholeData, con
 
 
 //make another .cpp and .h files for data printing
-void displaySpeed(double avg, double stdev, int m, int y);
 
-void displaySPCCforAllData(double S_T, double S_R, double T_R, int month);
-void displayTEMPdata(double avg, double stddvi);
-
-void displayHeaderForWholeData(int year);
-void displayAllWholeData(double SPEEDavg, double SPEEDstddvi, double SPEEDmad, double TEMPavg, double TEMPstddvi, double TEMPmad, double SRsum, int month);
+void writeDataHeaderToCSV(std::ofstream& outFile, const int year);
+void writeWholeDataToCSV(std::ostream& outFile, double SPEEDavg, double SPEEDstddvi,
+	double SPEEDmad, double TEMPavg, double TEMPstddvi, double TEMPmad, double SRsum, int month);
 
 #endif // DATA_PRINTER_H
