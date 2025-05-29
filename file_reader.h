@@ -2,7 +2,7 @@
 #define FILE_READER_H
 
 #include "data_structure.h"
-#include "input_processor2.h"
+#include "input_processor.h"
 
 void loadSource(SensorlogType& sensorData);
 

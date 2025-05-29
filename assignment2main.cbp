@@ -87,10 +87,10 @@
 		<Unit filename="hashMap.h">
 			<Option virtualFolder="data_struct/data_structure/" />
 		</Unit>
-		<Unit filename="input_processor2.cpp">
+		<Unit filename="input_processor.cpp">
 			<Option virtualFolder="data_handling/functions/" />
 		</Unit>
-		<Unit filename="input_processor2.h">
+		<Unit filename="input_processor.h">
 			<Option virtualFolder="data_handling/functions/" />
 		</Unit>
 		<Unit filename="io_operator.cpp">
