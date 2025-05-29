@@ -9,8 +9,8 @@ void outputSPEEDtoCMDprocessing(SensorlogType& sensorData, int m, int y) {
 		Vector<SensorRecType> newData;
 
 		dataFilter(sensorData, newData, m, y);
-		double avg = calAvg(newData, S_XTR);
-		double stdev = calStardDeviation(newData, avg, S_XTR);
+		double avg = generalAvgCalculation(newData, S_XTR);
+		double stdev = generalStardDeviationCalculation(newData, avg, S_XTR);
 
 		displaySpeed(avg, stdev, m, y);
 	}
@@ -23,8 +23,8 @@ void outputTEMPtoCMDprocessing(SensorlogType& sensorData, int year) {
 	for (int i = 1; i <= monthNum; ++i) {
 		Vector<SensorRecType> newDataX;
 		dataFilter(sensorData, newDataX, i, year);
-		double avg = calAvg(newDataX, T);
-		double stddvi = calStardDeviation(newDataX, avg, T);
+		double avg = generalAvgCalculation(newDataX, T);
+		double stddvi = generalStardDeviationCalculation(newDataX, avg, T);
 
 		std::cout << monthList[i - 1];
 
@@ -39,9 +39,9 @@ void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, i
 
 	skipRowContainingUnacceptableDataBaseOnSR(newDataX, newDataXX);
 
-	double S_T = calsPCC(newDataX, S_XTR, T);
-	double S_R = calsPCC(newDataXX, S_XTR, SR_XTR);
-	double T_R = calsPCC(newDataXX, T, SR_XTR);
+	double S_T = generalsPCCcalculation(newDataX, S_XTR, T);
+	double S_R = generalsPCCcalculation(newDataXX, S_XTR, SR_XTR);
+	double T_R = generalsPCCcalculation(newDataXX, T, SR_XTR);
 
 	displaySPCCforAllData(S_T, S_R, T_R, month);
 }
@@ -61,15 +61,15 @@ void outputWholeDATAtoCMDprocessing(SensorlogType& sensorData, int year) {
 		SensorlogTypeVector newDataX = Vector<SensorRecType>();
 		dataFilter(sensorData, newDataX, i, year);
 
-		double SRsum = calSumForSolar(newDataX, SR_XTR);
+		double SRsum = SumForSolarCalculation(newDataX, SR_XTR);
 
-		double SPEEDavg = calAvg(newDataX, S_XTR);
-		double SPEEDstddvi = calStardDeviation(newDataX, SPEEDavg, S_XTR);
-		double SPEEDmad = calMAD(newDataX, S_XTR);
+		double SPEEDavg = generalAvgCalculation(newDataX, S_XTR);
+		double SPEEDstddvi = generalStardDeviationCalculation(newDataX, SPEEDavg, S_XTR);
+		double SPEEDmad = generalMADCalculation(newDataX, S_XTR);
 
-		double TEMPavg = calAvg(newDataX, T);
-		double TEMPstddvi = calStardDeviation(newDataX, TEMPavg, T);
-		double TEMPmad = calMAD(newDataX, T);
+		double TEMPavg = generalAvgCalculation(newDataX, T);
+		double TEMPstddvi = generalStardDeviationCalculation(newDataX, TEMPavg, T);
+		double TEMPmad = generalMADCalculation(newDataX, T);
 
 		displayAllWholeData(SPEEDavg, SPEEDstddvi, SPEEDmad, TEMPavg, TEMPstddvi, TEMPmad, SRsum, i);
 	}
@@ -92,15 +92,15 @@ void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& sensorData, co
 		SensorlogTypeVector newDataX = Vector<SensorRecType>();
 		dataFilter(sensorData, newDataX, i, year);
 
-		double SRsum = calSumForSolar(newDataX, SR_XTR);
+		double SRsum = SumForSolarCalculation(newDataX, SR_XTR);
 
-		double SPEEDavg = calAvg(newDataX, S_XTR);
-		double SPEEDstddvi = calStardDeviation(newDataX, SPEEDavg, S_XTR);
-		double SPEEDmad = calMAD(newDataX, S_XTR);
+		double SPEEDavg = generalAvgCalculation(newDataX, S_XTR);
+		double SPEEDstddvi = generalStardDeviationCalculation(newDataX, SPEEDavg, S_XTR);
+		double SPEEDmad = generalMADCalculation(newDataX, S_XTR);
 
-		double TEMPavg = calAvg(newDataX, T);
-		double TEMPstddvi = calStardDeviation(newDataX, TEMPavg, T);
-		double TEMPmad = calMAD(newDataX, T);
+		double TEMPavg = generalAvgCalculation(newDataX, T);
+		double TEMPstddvi = generalStardDeviationCalculation(newDataX, TEMPavg, T);
+		double TEMPmad = generalMADCalculation(newDataX, T);
 
 		writeWholeDataToCSV(outFile, SPEEDavg, SPEEDstddvi, 
 			SPEEDmad, TEMPavg, TEMPstddvi, TEMPmad, SRsum, i);

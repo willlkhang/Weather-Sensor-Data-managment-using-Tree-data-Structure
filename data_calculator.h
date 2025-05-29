@@ -13,16 +13,16 @@
 #include "data_structure_enumeration.h"
 
 
-double calSum(const Vector<SensorRecType>& data, SensorDataField type);
+double generalSumCalculation(const Vector<SensorRecType>& data, SensorDataField type);
 
-double calSumForSolar(const Vector<SensorRecType>& data, SensorDataField type);
+double SumForSolarCalculation(const Vector<SensorRecType>& data, SensorDataField type);
 
-double calAvg(const Vector<SensorRecType>& data, SensorDataField type);
+double generalAvgCalculation(const Vector<SensorRecType>& data, SensorDataField type);
 
-double calStardDeviation(const Vector<SensorRecType>& data, double &mean, SensorDataField type);
+double generalStardDeviationCalculation(const Vector<SensorRecType>& data, double &mean, SensorDataField type);
 
-double calsPCC(const Vector<SensorRecType>& data, SensorDataField type1, SensorDataField type2);
+double generalsPCCcalculation(const Vector<SensorRecType>& data, SensorDataField type1, SensorDataField type2);
 
-double calMAD(const Vector<SensorRecType>& data, SensorDataField type);
+double generalMADCalculation(const Vector<SensorRecType>& data, SensorDataField type);
 
 #endif // DATA_CALCULATOR _H

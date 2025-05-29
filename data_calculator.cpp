@@ -1,6 +1,6 @@
 #include "data_calculator.h"
 
-double calSumForSolar(const Vector<SensorRecType>& data, SensorDataField type) {
+double SumForSolarCalculation(const Vector<SensorRecType>& data, SensorDataField type) {
     Vector<double> filledData = dataFieldFilter(data, type);
 
     double sum = 0.0;
@@ -12,7 +12,7 @@ double calSumForSolar(const Vector<SensorRecType>& data, SensorDataField type) {
     return sum;
 }
 
-double calSum(const Vector<SensorRecType>& data, SensorDataField type){
+double generalSumCalculation(const Vector<SensorRecType>& data, SensorDataField type){
     Math<double> math;
 
     Vector<double> filledData = dataFieldFilter(data, type);
@@ -21,7 +21,7 @@ double calSum(const Vector<SensorRecType>& data, SensorDataField type){
     return sum;
 }
 
-double calAvg(const Vector<SensorRecType>& data, SensorDataField type){
+double generalAvgCalculation(const Vector<SensorRecType>& data, SensorDataField type){
     Math<double> math;
 
     Vector<double> filledData = dataFieldFilter(data, type);
@@ -32,7 +32,7 @@ double calAvg(const Vector<SensorRecType>& data, SensorDataField type){
     return avg;
 }
 
-double calStardDeviation(const Vector<SensorRecType>& data, double &mean, SensorDataField type){
+double generalStardDeviationCalculation(const Vector<SensorRecType>& data, double &mean, SensorDataField type){
     Math<double> math;
 
     Vector<double> filledData = dataFieldFilter(data, type);
@@ -42,7 +42,7 @@ double calStardDeviation(const Vector<SensorRecType>& data, double &mean, Sensor
     return stdDevi;
 }
 
-double calsPCC(const Vector<SensorRecType>& data, SensorDataField type1, SensorDataField type2) {
+double generalsPCCcalculation(const Vector<SensorRecType>& data, SensorDataField type1, SensorDataField type2) {
     Math<double> math;
 
     Vector<double> extractedData1 = dataFieldFilter(data, type1);
@@ -53,7 +53,7 @@ double calsPCC(const Vector<SensorRecType>& data, SensorDataField type1, SensorD
     return spcc;
 }
 
-double calMAD(const Vector<SensorRecType>& data, SensorDataField type) {
+double generalMADCalculation(const Vector<SensorRecType>& data, SensorDataField type) {
     Math<double> math;
 
 	Vector<double> extractedData = dataFieldFilter(data, type);
