@@ -34,16 +34,25 @@ void outputTEMPtoCMDprocessing(SensorlogType& sensorData, int year) {
 }
 
 void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month) {
-	Vector<SensorRecType> newDataX;
+	Vector<SensorRecType> newDataX, newDataXX;
 	dataFilter(sensorData, newDataX, month, -1);
 
+	skipRowContainingUnacceptableDataBaseOnSR(newDataX, newDataXX);
+
 	double S_T = calsPCC(newDataX, S_XTR, T);
-	double S_R = calsPCC(newDataX, S_XTR, SR_XTR);
-	double T_R = calsPCC(newDataX, T, SR_XTR);
+	double S_R = calsPCC(newDataXX, S_XTR, SR_XTR);
+	double T_R = calsPCC(newDataXX, T, SR_XTR);
 
 	displaySPCCforAllData(S_T, S_R, T_R, month);
 }
 
+void skipRowContainingUnacceptableDataBaseOnSR(SensorlogTypeVector& data1, SensorlogTypeVector& data2) {
+	for (int i = 0; i < data1.size(); i++) {
+		if (data1[i].solarRadiation >= 100) {
+			data2.add_to_back(data1[i]);
+		}
+	}
+}
 
 void outputWholeDATAtoCMDprocessing(SensorlogType& sensorData, int year) {
 	displayHeaderForWholeData(year);

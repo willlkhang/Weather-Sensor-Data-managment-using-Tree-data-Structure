@@ -26,6 +26,8 @@ void outputTEMPtoCMDprocessing(SensorlogType& wholeData, int year);
 
 void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month);
 
+void skipRowContainingUnacceptableDataBaseOnSR(SensorlogTypeVector& data1, SensorlogTypeVector& data2);
+
 void outputWholeDATAtoCMDprocessing(SensorlogType& wholeData, int year);
 
 void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, int year);
