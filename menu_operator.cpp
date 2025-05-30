@@ -1,6 +1,6 @@
 #include "menu_operator.h"
 
-void outputSPEEDtoCMDprocessing(const SensorlogType& sensorData, int m, int y) {
+void outputSPEEDtoCMDprocessing(SensorlogType& sensorData, int m, int y) {
 	try {
 		if (!sensorData[y].findValue(m)) {
 			throw std::runtime_error("No Data found for the specific month of the year from the data source\nPlease check again\n");
@@ -19,7 +19,7 @@ void outputSPEEDtoCMDprocessing(const SensorlogType& sensorData, int m, int y) {
 	}
 }
 
-void outputTEMPtoCMDprocessing(const SensorlogType& sensorData, int year) {
+void outputTEMPtoCMDprocessing(SensorlogType& sensorData, int year) {
 	for (int i = 1; i <= monthNum; ++i) {
 		Vector<SensorRecType> newDataX;
 		dataFilter(sensorData, newDataX, i, year);
@@ -33,7 +33,7 @@ void outputTEMPtoCMDprocessing(const SensorlogType& sensorData, int year) {
 	std::cout << "\n";
 }
 
-void outputToCMDforS_T_R_SPCC_CombinationProcessing(const SensorlogType& sensorData, int month) {
+void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month) {
 	Vector<SensorRecType> newDataX, newDataXX;
 	dataFilter(sensorData, newDataX, month, -1);
 
@@ -46,7 +46,7 @@ void outputToCMDforS_T_R_SPCC_CombinationProcessing(const SensorlogType& sensorD
 	displaySPCCforAllData(S_T, S_R, T_R, month);
 }
 
-void skipRowContainingUnacceptableDataBaseOnSR(const SensorlogTypeVector& data1, SensorlogTypeVector& data2) {
+void skipRowContainingUnacceptableDataBaseOnSR(SensorlogTypeVector& data1, SensorlogTypeVector& data2) {
 	for (int i = 0; i < data1.size(); i++) {
 		if (data1[i].solarRadiation >= 100) {
 			data2.add_to_back(data1[i]);
@@ -54,7 +54,7 @@ void skipRowContainingUnacceptableDataBaseOnSR(const SensorlogTypeVector& data1,
 	}
 }
 
-void outputWholeDATAtoCMDprocessing(const SensorlogType& sensorData, int year) {
+void outputWholeDATAtoCMDprocessing(SensorlogType& sensorData, int year) {
 	displayHeaderForWholeData(year);
 
 	for (int i = 1; i <= monthNum; ++i) {
@@ -76,7 +76,7 @@ void outputWholeDATAtoCMDprocessing(const SensorlogType& sensorData, int year) {
 	std::cout << "\n";
 }
 
-void outputWholeDATAtoCSVprocessing(std::string name, const SensorlogType& wholeData, int year) {
+void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, int year) {
 	std::ofstream outFile(name);
 	if (!outFile.is_open()) {
 		throw std::runtime_error("Cannot open the output file. Please check again.\n");
@@ -85,7 +85,7 @@ void outputWholeDATAtoCSVprocessing(std::string name, const SensorlogType& whole
 	outputToCSVprocessing(outFile, wholeData, year);
 }
 
-void outputToCSVprocessing(std::ofstream& outFile, const SensorlogType& sensorData, const int year) {
+void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& sensorData, const int year) {
 	writeDataHeaderToCSV(outFile, year);
 
 	for (int i = 1; i <= monthNum; ++i) {

@@ -39,7 +39,7 @@
   * @return void
   * @pre sensor_data must be populated
   */
-void SPEEDAvgVsStdDeviForSPECMonthvsYear(const SensorlogType& sensor_data);
+void SPEEDAvgVsStdDeviForSPECMonthvsYear(SensorlogType& sensor_data);
 
 /**
  * @brief Computes and displays average temperature and standard deviation for each month of a specific year
@@ -50,7 +50,7 @@ void SPEEDAvgVsStdDeviForSPECMonthvsYear(const SensorlogType& sensor_data);
  * @return void
  * @pre sensor_data must be populated
  */
-void TEMPAvgVsStdDeviForEACHMonthvsYear(const SensorlogType& sensor_data);
+void TEMPAvgVsStdDeviForEACHMonthvsYear(SensorlogType& sensor_data);
 
 /**
 * @brief Computes and displays sample Pearson correlation coefficients (SPCC)
@@ -61,7 +61,7 @@ void TEMPAvgVsStdDeviForEACHMonthvsYear(const SensorlogType& sensor_data);
 * @return void
 * @pre sensorData must be valid and cover the required time period
 */
-void S_T_R_SPCC_Combination(const SensorlogType& sensorData);
+void S_T_R_SPCC_Combination(SensorlogType& sensorData);
 
 /**
 * @brief Generates an annual sensor data report and exports to CSV
@@ -73,6 +73,6 @@ void S_T_R_SPCC_Combination(const SensorlogType& sensorData);
 * @return void
 * @pre sensor_data must contain data for the specified year
 */
-void AnnualSensorReportToCSV(const SensorlogType& sensor_data);
+void AnnualSensorReportToCSV(SensorlogType& sensor_data);
 
 #endif
