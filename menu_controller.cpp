@@ -1,22 +1,22 @@
 #include "menu_controller.h"
 
-void SPEEDAvgVsStdDeviForSPECMonthvsYear(SensorlogType& sensorData) {
+void SPEEDAvgVsStdDeviForSPECMonthvsYear(const SensorlogType& sensorData) {
 	int y = inputYear();
 	int m = inputMonth();
 	outputSPEEDtoCMDprocessing(sensorData, m, y);
 }
 
-void TEMPAvgVsStdDeviForEACHMonthvsYear(SensorlogType& sensorData) {
+void TEMPAvgVsStdDeviForEACHMonthvsYear(const SensorlogType& sensorData) {
 	int y = inputYear();
 	outputTEMPtoCMDprocessing(sensorData, y);
 }
 
-void S_T_R_SPCC_Combination(SensorlogType& sensorData) {
+void S_T_R_SPCC_Combination(const SensorlogType& sensorData) {
 	int m = inputMonth();
 	outputToCMDforS_T_R_SPCC_CombinationProcessing(sensorData, m);
 }
 
-void AnnualSensorReportToCSV(SensorlogType& sensorData) {
+void AnnualSensorReportToCSV(const SensorlogType& sensorData) {
 	int y = inputYear();
 
 	try {

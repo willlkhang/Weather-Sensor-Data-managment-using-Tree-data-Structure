@@ -63,9 +63,6 @@
 		<Unit filename="data_printer.h">
 			<Option virtualFolder="user/menu/menu_printer/" />
 		</Unit>
-		<Unit filename="data_structure.cpp">
-			<Option virtualFolder="data_struct/data_structure/" />
-		</Unit>
 		<Unit filename="data_structure.h">
 			<Option virtualFolder="data_struct/data_structure/" />
 		</Unit>

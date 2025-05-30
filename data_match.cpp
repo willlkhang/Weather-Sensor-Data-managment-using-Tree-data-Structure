@@ -28,7 +28,7 @@ Vector<double> dataFieldFilter(const Vector<SensorRecType>& data, const SensorDa
     return extractedCol;
 }
 
-void dataFilter(SensorlogType& sensorData, SensorlogTypeVector&newData,const int month = -1, const int year = -1) {
+void dataFilter(const SensorlogType& sensorData, SensorlogTypeVector&newData,const int month = -1, const int year = -1) {
 	Vector<SensorRecType> tmpVec;
 	if (year != -1 && month != -1) {
 		sensorData[year][month].inOrder(DataExtractor<SensorRecType>::extractData);

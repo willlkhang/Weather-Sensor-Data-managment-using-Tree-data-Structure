@@ -12,8 +12,8 @@
  * Stores key-value pairs using a fixed-size array of linked lists. Supports common
  * operations such as insertion, deletion, retrieval, and search.
  *
- * @tparam K Type of the key
- * @tparam V Type of the value
+ * @param K Type of the key
+ * @param V Type of the value
  *
  * @author Minh Khang Nguyen
  * @version 01
@@ -105,6 +105,17 @@ public:
 	 * @post Inserts default value if key does not exist
 	 */
 	V& operator[](const K& key);
+
+	/**
+	* @brief Const indexing operator
+	*
+	* Returns a const reference to the value for a given key. Throws if key does not exist.
+	*
+	* @param key Key to access
+	* @return Const reference to associated value
+	* @throws std::out_of_range if key is not found
+	*/
+	const V& operator[](const K& key) const;
 
 	/**
 	 * @brief Accessor function
@@ -343,6 +354,20 @@ V& HashMap<K, V>::operator[](const K& key) {
 	table[index] = newone;
 	++elementCount;
 	return table[index]->value;
+}
+
+template<typename K, typename V>
+const V& HashMap<K, V>::operator[](const K& key) const {
+	int index = hashFunction(key);
+	Node* current = table[index];
+
+	//getter
+	while (current) {
+		if (current->key == key) return current->value;
+		current = current->next;
+	}
+
+	throw std::out_of_range("No such the index store in this map\n");
 }
 
 template<typename K, typename V>

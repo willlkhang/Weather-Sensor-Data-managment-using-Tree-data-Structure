@@ -44,7 +44,7 @@
   * @return void
   * @pre sensorData must include the specified year and month
   */
-void outputSPEEDtoCMDprocessing(SensorlogType& sensorData, int m, int y);
+void outputSPEEDtoCMDprocessing(const SensorlogType& sensorData, int m, int y);
 
 /**
  * @brief Outputs average temperature and standard deviation for each month of a specific year
@@ -56,7 +56,7 @@ void outputSPEEDtoCMDprocessing(SensorlogType& sensorData, int m, int y);
  * @return void
  * @pre wholeData must contain records for the specified year
  */
-void outputTEMPtoCMDprocessing(SensorlogType& wholeData, int year);
+void outputTEMPtoCMDprocessing(const SensorlogType& wholeData, int year);
 
 /**
 * @brief Calculates and prints SPCC values between sensor metrics for a given month
@@ -69,7 +69,7 @@ void outputTEMPtoCMDprocessing(SensorlogType& wholeData, int year);
 * @return void
 * @pre sensorData should have valid data entries for the month
 */
-void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month);
+void outputToCMDforS_T_R_SPCC_CombinationProcessing(const SensorlogType& sensorData, int month);
 
 /**
 * @brief Filters and retains only sensor data with acceptable solar radiation values
@@ -81,7 +81,7 @@ void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, i
 * @return void
 * @post data2 contains only rows from data1 where solarRadiation >= 100
 */
-void skipRowContainingUnacceptableDataBaseOnSR(SensorlogTypeVector& data1, SensorlogTypeVector& data2);
+void skipRowContainingUnacceptableDataBaseOnSR(const SensorlogTypeVector& data1, SensorlogTypeVector& data2);
 
 /**
  * @brief Displays annual sensor data summary for all 12 months to the console
@@ -94,7 +94,7 @@ void skipRowContainingUnacceptableDataBaseOnSR(SensorlogTypeVector& data1, Senso
  * @return void
  * @pre wholeData must include data for each month of the year
  */
-void outputWholeDATAtoCMDprocessing(SensorlogType& wholeData, int year);
+void outputWholeDATAtoCMDprocessing(const SensorlogType& wholeData, int year);
 
 /**
  * @brief Exports annual sensor statistics to a CSV file
@@ -108,7 +108,7 @@ void outputWholeDATAtoCMDprocessing(SensorlogType& wholeData, int year);
  * @return void
  * @pre wholeData must have valid entries for each month
  */
-void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, int year);
+void outputWholeDATAtoCSVprocessing(std::string name, const SensorlogType& wholeData, int year);
 
 /**
 * @brief Writes formatted sensor statistics to CSV output stream
@@ -121,7 +121,7 @@ void outputWholeDATAtoCSVprocessing(std::string name, SensorlogType& wholeData, 
 * @return void
 * @pre outFile must be open and writable
 */
-void outputToCSVprocessing(std::ofstream& outFile, SensorlogType& wholeData, const int year);
+void outputToCSVprocessing(std::ofstream& outFile, const SensorlogType& wholeData, const int year);
 
 
 #endif // DATA_PRINTER_H

@@ -45,7 +45,7 @@ Vector<double> dataFieldFilter(const Vector<SensorRecType>& data, const SensorDa
 	 * @pre sensor_data must be loaded and valid
 	 * @post newData contains extracted records; internal extractor buffer is cleared
 	 */
-void dataFilter(SensorlogType& sensor_data, SensorlogTypeVector& newData, const int month, const int year);
+void dataFilter(const SensorlogType& sensor_data, SensorlogTypeVector& newData, const int month, const int year);
 
 
 #endif // DATA_MATCH_H
