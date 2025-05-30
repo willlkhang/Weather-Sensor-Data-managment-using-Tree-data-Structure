@@ -133,21 +133,33 @@ const int menuItem = 5;
         : d(date), t(time), speed(s), solarRadiation(sr), temperature(temp) {}
 };
 
-    /**
-	 * @typedef SensorlogType
-	 * @brief A collection of sensor records
-	 *
-	 * Defines a Vector of SensorRecType to store all entries loaded from a sensor log (e.g., CSV file).\n
-	 * Used to manage multiple sensor measurements.\n
-	 *
-	 * @author Minh Khang Nguyen
-	 * @version 01
-	 *
-	 * @todo Optimize memory usage for large logs
-	 * @bug Vector resizing may impact performance for large datasets
-	 */
+ /**
+  * @typedef SensorlogTypeVector
+  * @brief A flat collection of sensor records
+  *
+  * Defines a Vector of SensorRecType to store entries from a sensor log (e.g., CSV file).
+  * Used in temporary operations such as filtering or computing statistics.
+  *
+  * @author Minh Khang Nguyen
+  * @version 01
+  *
+  * @todo Optimize memory usage for large logs
+  * @bug Vector resizing may impact performance for large datasets
+  */
 typedef Vector<SensorRecType> SensorlogTypeVector;
-
+	
+/**
+ * @typedef SensorlogType
+ * @brief Hierarchical structure of sensor records by year and month
+ *
+ * Defines a HashMap of years, where each year maps to another HashMap of months,
+ * which in turn maps to a Red-Black Tree of SensorRecType.
+ *
+ * This structure allows fast access and sorted traversal by date.
+ *
+ * @author Minh Khang Nguyen
+ * @version 01
+ */
 typedef HashMap<int, HashMap<int, RBTree<SensorRecType>>> SensorlogType;
 
 #endif // DATA_STRUCTURE_H_INCLUDED

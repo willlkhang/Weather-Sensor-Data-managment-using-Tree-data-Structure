@@ -5,46 +5,181 @@
 #include <functional> // for std::hash only
 #include <stdexcept>
 
+/**
+ * @class HashMap
+ * @brief A simple hash map implementation using separate chaining for collision handling
+ *
+ * Stores key-value pairs using a fixed-size array of linked lists. Supports common
+ * operations such as insertion, deletion, retrieval, and search.
+ *
+ * @tparam K Type of the key
+ * @tparam V Type of the value
+ *
+ * @author Minh Khang Nguyen
+ * @version 01
+ *
+ * @todo Support dynamic resizing and load factor threshold
+ * @bug No protection against hash collisions creating long chains
+ */
 template<typename K, typename V>
 class HashMap {
 public:
-	HashMap();
-	HashMap(const HashMap& other);
-	~HashMap();
-	HashMap& operator=(const HashMap& other);
 
+	/**
+	 * @brief Default constructor
+	 *
+	 * Initializes an empty hash map with all buckets set to null.
+	 *
+	 * @post Hash table is initialized with size 101
+	 */
+	HashMap();
+
+	/**
+	 * @brief Copy constructor
+	 *
+	 * Performs a deep copy of another HashMap instance.
+	 *
+	 * @param other HashMap instance to copy from
+	 * @post A deep copy of all chains is made
+	 */
+	HashMap(const HashMap& other);
+
+	/**
+	 * @brief Destructor
+	 *
+	 * Frees all dynamically allocated memory for node chains.
+	 *
+	 * @post All memory is released
+	 */
+	~HashMap();
+
+	/**
+	 * @brief Assignment operator
+	 *
+	 * Performs deep copy assignment of another HashMap.
+	 *
+	 * @param other HashMap to assign from
+	 * @return Reference to the current object
+	 * @post All previous data is cleared and replaced
+	 */
+
+	HashMap& operator=(const HashMap& other);
+	
+	/**
+	 * @brief Adds or updates a key-value pair
+	 *
+	 * If key exists, its value is updated; otherwise a new node is inserted.
+	 *
+	 * @param key Key to insert or update
+	 * @param value Value to associate with the key
+	 * @post Map will contain key with new value
+	 */
 	void addItem(const K& key, const V& value);
+	
+	/**
+	 * @brief Removes the key-value pair with the specified key
+	 *
+	 * If key is not found, no operation is performed.
+	 *
+	 * @param key Key to remove
+	 * @post Key-value pair is removed if present
+	 */
 	void removeItem(const K& key);
+	
+	/**
+	 * @brief Checks if a key exists in the map
+	 *
+	 * @param key Key to search for
+	 * @return True if key is found; otherwise, false
+	 */
 	bool findValue(const K& key) const;
 
+	/**
+	 * @brief Indexing operator
+	 *
+	 * Returns a reference to the value for a given key. If key does not exist,
+	 * a new key is added with default value.
+	 *
+	 * @param key Key to access
+	 * @return Reference to associated value
+	 * @post Inserts default value if key does not exist
+	 */
 	V& operator[](const K& key);
+
+	/**
+	 * @brief Accessor function
+	 *
+	 * Returns a reference to the value for a given key. Throws if not found.
+	 *
+	 * @param key Key to access
+	 * @return Reference to value
+	 * @throws std::out_of_range if key is not found
+	 */
 	V& at(const K& key);
+
+	/**
+	 * @brief Const accessor function
+	 *
+	 * Returns a const reference to the value for a given key. Throws if not found.
+	 *
+	 * @param key Key to access
+	 * @return Const reference to value
+	 * @throws std::out_of_range if key is not found
+	 */
 	const V& at(const K& key) const;
 
-
+	/**
+	 * @brief Returns the number of stored key-value pairs
+	 *
+	 * @return Total number of elements in the map
+	 */
 	size_t size() const;
+
+	/**
+	 * @brief Checks whether the map is empty
+	 *
+	 * @return True if map has no elements; false otherwise
+	 */
 	bool empty() const;
 
 private:
+
+	/// Fixed table size for hash distribution
 	static const int tableSize = 101; // prime number distribution
 
+	/// Internal structure to represent a key-value pair in a chain
 	struct Node {
-		K key;
-		V value;
-		Node* next;
-
+		K key;        /// Key of the node
+		V value;      /// Value associated with the key
+		Node* next;   /// Pointer to the next node in the chain
+		
+		/**
+		 * @brief Constructor for a node
+		 *
+		 * Initializes a node with key-value pair.
+		 *
+		 * @param k Key
+		 * @param v Value
+		 */
 		Node(const K& k, const V& v);
 	};
 
+	/// Array of pointers to linked lists (buckets)
 	Node* table[tableSize];
 
+	/// Number of elements in the map
 	size_t elementCount;
 
+	/// Hash function to compute index
 	int hashFunction(const K& key) const;
-
+	
+	/// Deep copy of linked list
 	Node* copyChain(Node* head) const;
+	
+	/// Delete linked list
 	void deleteChain(Node* head);
 
+	// Clear entire map
 	void clear();
 };
 

@@ -6,12 +6,14 @@ void loadCSV(SensorlogType& sensorData, std::string csvName) {
 
     processCSVtoSensorData(sensorData, inFile);
 
-    std::cout << "Load " << csvName << " sucessfully\n";
+    std::cout << "Load " << csvName << " successfully\n";
 }
 
 void processCSVtoSensorData(SensorlogType& sensorData, std::istream& inFile) {
 
     Vector<std::string> headerVec = readHeader(inFile);
+
+    int acceptedLine = 0, deniedLine = 0;
 
     std::string line = "";
     while (std::getline(inFile, line)) {
@@ -24,16 +26,21 @@ void processCSVtoSensorData(SensorlogType& sensorData, std::istream& inFile) {
         try {
             SensorRecType temp = rowExtraction(row, headerVec);
             sensorData[temp.d.GetYear()][temp.d.GetMonth()].insert(temp);
+            ++acceptedLine;
         }
         catch (std::invalid_argument& e) {
-            std::cerr << "Invalid data found in the row --> IGNORE " << e.what() << "\n";
-        }
-        catch (std::runtime_error& e) {
-            std::cerr << "Data on the line is not complete --> IGNORE " << e.what() << "\n";
+            ++deniedLine;
         }
     }
+
+    fileUploadinglogSummary(acceptedLine, deniedLine);
 }
 
+void fileUploadinglogSummary(int acceptedLine, int deniedLine) {
+    std::cout << "\n\n---------------------------------------\n";
+    std::cout << "Accepted lines: " << acceptedLine << '\n';
+    std::cout << "Denied lines: " << deniedLine << "\n";
+}
 
 Vector<std::string> readHeader(std::istream& input) {
     std::string line = " ";
@@ -56,19 +63,15 @@ SensorRecType rowExtraction(const Vector<std::string>& row, const Vector<std::st
     double speed = 0.0, solarRadiation = 0.0, temperature = 0.0;
 
     int dateTimeIndx = getColIndex(header, "WAST");
-    if (dateTimeIndx == -1) throw std::invalid_argument("Found missing data at WAST\n");
     readDateTime(date, time, row[dateTimeIndx]);
 
     int speedIndx = getColIndex(header, "S");
-    if (speedIndx == -1) throw std::invalid_argument("Found missing data at Speed (S)\n");
     speed = std::stod(row[speedIndx]);
 
     int SRIndx = getColIndex(header, "SR");
-    if (SRIndx == -1) throw std::invalid_argument("Found missing data at Solar Radiation (SR)\n");
     solarRadiation = std::stod(row[SRIndx]);
 
     int tempIndx = getColIndex(header, "T");
-    if (tempIndx == -1) throw std::invalid_argument("Found missing data at Air ambient temperature (S)\n");
     temperature = std::stod(row[tempIndx]);
 
     return { date, time, speed, solarRadiation, temperature };

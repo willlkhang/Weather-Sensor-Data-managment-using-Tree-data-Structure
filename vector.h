@@ -16,10 +16,13 @@
 	 * element access, and basic operations like adding and removing elements.\n
 	 * The vector automatically doubles its capacity when full to accommodate new elements.\n
 	 *
-	 * @tparam T The type of elements stored in the vector
+	 * @param T The type of elements stored in the vector
 	 *
 	 * @author Minh Khang Nguyen
 	 * @version 01
+	 * 
+	 * @version 02
+	 * add resize functionality
 	 *
 	 * @todo Add bounds checking for subscript operator
 	 * @bug Subscript operator may access invalid memory if index is out of range
@@ -128,8 +131,6 @@ public:
 		 */
     void add_to_back(const T &value);
 
-    //void remove_from_back();
-
 
 private:
     /// Current number of elements in the vector
@@ -139,6 +140,14 @@ private:
     /// Pointer to the dynamically allocated array
     T* array;
 
+	/**
+	 * @brief Resize the vector
+	 *
+	 * Increases internal array capacity to newCapacity if needed.
+	 *
+	 * @param newCapacity New capacity size
+	 * @post Internal array is resized and old data copied
+	 */
 	void resize(int newCapacity);
 };
 

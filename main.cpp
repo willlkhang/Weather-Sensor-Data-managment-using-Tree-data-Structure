@@ -7,7 +7,6 @@
 
 
 #include "input_processor.h"
-#include "RBmap.h"
 
 
 int main() {
@@ -15,7 +14,7 @@ int main() {
     try
     {
         SensorlogType sensorData;
-        loadSource(sensorData, "data/data_source1.txt");
+        loadSource(sensorData, "data/data_source.txt");
         menu(sensorData);
     }
     catch (std::exception& e) {

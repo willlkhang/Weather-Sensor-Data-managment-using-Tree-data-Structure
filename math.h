@@ -19,10 +19,12 @@
 	 * deviation on numerical data stored in a Vector.\n
 	 * It is designed to work with numeric types such as int, float, or double.\n
 	 *
-	 * @tparam T The numeric data type stored in the vector
+	 * @param T The numeric data type stored in the vector
 	 *
 	 * @author Minh Khang Nguyen
 	 * @version 01
+	 * 
+	 * @version 2 add MAD and sPCC functionality
 	 *
 	 * @todo Add support for other statistical measures
 	 * @bug Empty vectors may cause division by zero in some calculations
@@ -102,8 +104,20 @@ public:
 		 */
     double calStandardDeviationCustomParam(Vector<T> data, double mean);
 
+	/**
+	 * @brief Computes sample Pearson Product-Moment Correlation Coefficient
+	 * @param x Vector X
+	 * @param y Vector Y
+	 * @return Correlation coefficient (r) between X and Y
+	 * @pre Vectors x and y must be of equal size
+	 */
 	double sPPC(const Vector<T>& x, const Vector<T>& y);
 
+	/**
+	 * @brief Computes Median Absolute Deviation (MAD) from mean
+	 * @param x Vector of numeric values
+	 * @return MAD value as double
+	 */
 	double MAD(const Vector<T>& x);
 
 private:
