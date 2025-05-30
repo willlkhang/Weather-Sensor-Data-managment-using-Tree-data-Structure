@@ -1,25 +1,17 @@
 #include "menu_operator.h"
 
 void outputSPEEDtoCMDprocessing(SensorlogType& sensorData, int m, int y) {
-	try {
-		if (!sensorData[y].findValue(m)) {
-			throw std::runtime_error("No Data found for the specific month of the year from the data source\nPlease check again\n");
-		}
+	Vector<SensorRecType> newData;
 
-		Vector<SensorRecType> newData;
+	dataFilter(sensorData, newData, m, y);
+	double avg = generalAvgCalculation(newData, S_XTR);
+	double stdev = generalStardDeviationCalculation(newData, avg, S_XTR);
 
-		dataFilter(sensorData, newData, m, y);
-		double avg = generalAvgCalculation(newData, S_XTR);
-		double stdev = generalStardDeviationCalculation(newData, avg, S_XTR);
-
-		displaySpeed(avg, stdev, m, y);
-	}
-	catch (const std::exception& e) {
-		std::cerr << "\nError: " << e.what() << "\n";
-	}
+	displaySpeed(avg, stdev, m, y);
 }
 
 void outputTEMPtoCMDprocessing(SensorlogType& sensorData, int year) {
+	std::cout << "\n";
 	for (int i = 1; i <= monthNum; ++i) {
 		Vector<SensorRecType> newDataX;
 		dataFilter(sensorData, newDataX, i, year);
@@ -36,6 +28,13 @@ void outputTEMPtoCMDprocessing(SensorlogType& sensorData, int year) {
 void outputToCMDforS_T_R_SPCC_CombinationProcessing(SensorlogType& sensorData, int month) {
 	Vector<SensorRecType> newDataX, newDataXX;
 	dataFilter(sensorData, newDataX, month, -1);
+
+	bool find = false;
+	for (int i = 0; i < newDataX.size(); i++) {
+		if (newDataX[i].d.GetMonth() == month) find = true; 
+	}
+	if (find == false)
+		throw std::runtime_error("No Data found for the month from the data source\nPlease check again\n");
 
 	skipRowContainingUnacceptableDataBaseOnSR(newDataX, newDataXX);
 

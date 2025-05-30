@@ -64,7 +64,7 @@ public:
 	 */
 
 	HashMap& operator=(const HashMap& other);
-	
+
 	/**
 	 * @brief Adds or updates a key-value pair
 	 *
@@ -75,7 +75,7 @@ public:
 	 * @post Map will contain key with new value
 	 */
 	void addItem(const K& key, const V& value);
-	
+
 	/**
 	 * @brief Removes the key-value pair with the specified key
 	 *
@@ -85,7 +85,7 @@ public:
 	 * @post Key-value pair is removed if present
 	 */
 	void removeItem(const K& key);
-	
+
 	/**
 	 * @brief Checks if a key exists in the map
 	 *
@@ -106,16 +106,6 @@ public:
 	 */
 	V& operator[](const K& key);
 
-	/**
-	* @brief Const indexing operator
-	*
-	* Returns a const reference to the value for a given key. Throws if key does not exist.
-	*
-	* @param key Key to access
-	* @return Const reference to associated value
-	* @throws std::out_of_range if key is not found
-	*/
-	const V& operator[](const K& key) const;
 
 	/**
 	 * @brief Accessor function
@@ -163,7 +153,7 @@ private:
 		K key;        /// Key of the node
 		V value;      /// Value associated with the key
 		Node* next;   /// Pointer to the next node in the chain
-		
+
 		/**
 		 * @brief Constructor for a node
 		 *
@@ -183,10 +173,10 @@ private:
 
 	/// Hash function to compute index
 	int hashFunction(const K& key) const;
-	
+
 	/// Deep copy of linked list
 	Node* copyChain(Node* head) const;
-	
+
 	/// Delete linked list
 	void deleteChain(Node* head);
 
@@ -356,19 +346,6 @@ V& HashMap<K, V>::operator[](const K& key) {
 	return table[index]->value;
 }
 
-template<typename K, typename V>
-const V& HashMap<K, V>::operator[](const K& key) const {
-	int index = hashFunction(key);
-	Node* current = table[index];
-
-	//getter
-	while (current) {
-		if (current->key == key) return current->value;
-		current = current->next;
-	}
-
-	throw std::out_of_range("No such the index store in this map\n");
-}
 
 template<typename K, typename V>
 V& HashMap<K, V>::at(const K& key) {
@@ -376,7 +353,7 @@ V& HashMap<K, V>::at(const K& key) {
 	for (Node* current = table[index]; current; current = current->next) {
 		if (current->key == key) return current->value;
 	}
-	throw std::out_of_range("no such key in this map\n");
+	throw std::out_of_range("no such index in this map\n");
 }
 
 template<typename K, typename V>
@@ -385,7 +362,7 @@ const V& HashMap<K, V>::at(const K& key) const {
 	for (Node* current = table[index]; current; current = current->next) {
 		if (current->key == key) return current->value;
 	}
-	throw std::out_of_range("no such key in this map\n");
+	throw std::out_of_range("no such key index this map\n");
 }
 
 #endif //HASHMAP_H

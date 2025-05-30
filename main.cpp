@@ -14,7 +14,7 @@ int main() {
     try
     {
         SensorlogType sensorData;
-        loadSource(sensorData, "data/data_source1.txt");
+        loadSource(sensorData, "data/data_source.txt");
         menu(sensorData);
     }
     catch (std::exception& e) {
